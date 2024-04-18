@@ -31,7 +31,13 @@ let playlist = {
             title: 'Jason Derulo - Breathing',
             desription: '',
             duration: '',
-            src: 'https://drive.google.com/uc?export=download&id=1p1qPULSUNXkNVWhxIVIicl3KPVt8JABJ'
+            src: 'https://www.dropbox.com/scl/fi/4s8re7ugeb3n8wu2pkpmk/La-Rosa-de-Guadalupe-cap-tulo-completo-El-hu-rfano-Shows-La-Rosa-de-Guadalupe-Las-Estrellas-1.mp4?rlkey=evrdyq6l0sw42hwk1xpxntj4i&dl=1'
+        },
+        {
+            title: '2',
+            desription: '',
+            duration: '',
+            src: ''
         },
         // Resto de los elementos del array playlist.media permanecen iguales...
     ],
