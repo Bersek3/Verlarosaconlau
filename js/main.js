@@ -21,20 +21,62 @@ let element = {
 
 let video_dom_controler = {
     selected: 0,
-    src_video: [
-        "https://dcs-vod.mp.lura.live/vod/p/2266400/prog.m3u8?i=i176980406-n36384be2-68b3-4374-80b8-4088adac3a7c&anvtrid=f5d61b597e652f50ad4c180ee4d19342"
-        // Puedes agregar más enlaces m3u8 aquí si es necesario
-    ],
+    src_video: [],
     flag: false
 };
 
 let playlist = {
     media: [
         {
-            title: 'CAPITULO 1',
+            title: 'Jason Derulo - Breathing',
             desription: '',
             duration: '',
         },
+        {
+            title: 'Ariana Grande - Love Me Harder (feat. The Weeknd)',
+            desription: '',
+            duration: '',
+        },
+        {
+            title: 'Trey Songz - Chi Chi feat. Chris Brown [Official Music Video]',
+            desription: '',
+            duration: '',
+        },
+        {
+            title: 'ILOVEMAKONNEN (FEAT. DRAKE) - TUESDAY',
+            desription: '',
+            duration: '',
+        },
+        {
+            title: 'Tyga - For The Road (Official Music Video) (Explicit) ft. Chris Brown',
+            desription: '',
+            duration: '',
+        },
+        {
+            title: 'Meek Mill - Going Bad feat. Drake (Official Video)',
+            desription: '',
+            duration: '',
+        },
+        {
+            title: 'No New Friends (Explicit)',
+            desription: '',
+            duration: '',
+        },
+        {
+            title: 'Kodak Black - ZEZE feat. Travis Scott & Offset [Official Music Video]',
+            desription: '',
+            duration: '',
+        },
+        {
+            title: 'TRIPPIE REDD ft. 6IX9INE - POLES1469 (official music video)',
+            desription: '',
+            duration: '',
+        },
+        {
+            title: 'French Montana - No Stylist ft. Drake (Official Music Video)',
+            desription: '',
+            duration: '',
+        }
     ],
 };
 
@@ -224,7 +266,6 @@ element.btn_forward.addEventListener('click',()=>{
     element.video_title.innerHTML = playlist.media[video_dom_controler.selected].title;
     activate(video_dom_controler.selected);
 });
-
 
 
 
