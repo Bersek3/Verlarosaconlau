@@ -28,13 +28,13 @@ let video_dom_controler = {
 let playlist = {
     media: [
         {
-            title: 'Jason Derulo - Breathing',
-            desription: '',
+            title: 'El Huerfano (18 Abril 2024)',
+            desription: 'Iker es un hijo ejemplar, pero cae en las redes de Giovanna, la hija de la mujer con quien su padre rehace su vida.',
             duration: '',
-            src: 'https://dcs-vod.mp.lura.live/vod/p/2266400/prog.m3u8?i=i176955729-nd1a09dfb-ca10-4c46-88f1-841e8b79a1f7&anvtrid=dac261db0d85678ef914d55ef327e3f7'
+            src: 'https://rosadeguadalupe.blob.core.windows.net/videos/el_huerfano.mp4'
         },
         {
-            title: '2',
+            title: 'La lista MILF, bajas pasiones (17 Abril 2024)',
             desription: '',
             duration: '',
             src: ''
