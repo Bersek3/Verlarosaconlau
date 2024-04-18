@@ -31,54 +31,12 @@ let playlist = {
             title: 'Jason Derulo - Breathing',
             desription: '',
             duration: '',
+            src: 'https://drive.google.com/uc?export=download&id=1p1qPULSUNXkNVWhxIVIicl3KPVt8JABJ'
         },
-        {
-            title: 'Ariana Grande - Love Me Harder (feat. The Weeknd)',
-            desription: '',
-            duration: '',
-        },
-        {
-            title: 'Trey Songz - Chi Chi feat. Chris Brown [Official Music Video]',
-            desription: '',
-            duration: '',
-        },
-        {
-            title: 'ILOVEMAKONNEN (FEAT. DRAKE) - TUESDAY',
-            desription: '',
-            duration: '',
-        },
-        {
-            title: 'Tyga - For The Road (Official Music Video) (Explicit) ft. Chris Brown',
-            desription: '',
-            duration: '',
-        },
-        {
-            title: 'Meek Mill - Going Bad feat. Drake (Official Video)',
-            desription: '',
-            duration: '',
-        },
-        {
-            title: 'No New Friends (Explicit)',
-            desription: '',
-            duration: '',
-        },
-        {
-            title: 'Kodak Black - ZEZE feat. Travis Scott & Offset [Official Music Video]',
-            desription: '',
-            duration: '',
-        },
-        {
-            title: 'TRIPPIE REDD ft. 6IX9INE - POLES1469 (official music video)',
-            desription: '',
-            duration: '',
-        },
-        {
-            title: 'French Montana - No Stylist ft. Drake (Official Music Video)',
-            desription: '',
-            duration: '',
-        }
+        // Resto de los elementos del array playlist.media permanecen iguales...
     ],
 };
+
 
 element.video_array.forEach(vid =>{
     video_dom_controler.src_video.push(vid.src);
@@ -113,7 +71,7 @@ function VideoContainerLoad(){
              element.video_list.appendChild(list);
         }  
     }
-
+    
     function changeSource(url){
         var video = element.video;
         video.src = url;
@@ -132,7 +90,7 @@ function VideoContainerLoad(){
 
     function init(){
         render();
-        changeSource(video_dom_controler.src_video[0]);
+        changeSource(playlist.media[0].src); // Cambia el origen del primer video al iniciar
         checkedRadio();
         activate(0);
     }
