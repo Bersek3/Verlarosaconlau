@@ -31,7 +31,7 @@ let playlist = {
             title: 'Jason Derulo - Breathing',
             desription: '',
             duration: '',
-            src: 'https://dl.dropboxusercontent.com/scl/fi/4s8re7ugeb3n8wu2pkpmk/el_huerfano.mp4?rlkey=evrdyq6l0sw42hwk1xpxntj4i&dl=0'
+            src: 'video/prueba.mp4'
         },
         {
             title: '2',
