@@ -31,7 +31,7 @@ let playlist = {
             title: 'Jason Derulo - Breathing',
             desription: '',
             duration: '',
-            src: 'video/prueba.mp4'
+            src: 'https://dcs-vod.mp.lura.live/vod/p/2266400/prog.m3u8?i=i176955729-nd1a09dfb-ca10-4c46-88f1-841e8b79a1f7&anvtrid=dac261db0d85678ef914d55ef327e3f7'
         },
         {
             title: '2',
