@@ -99,7 +99,6 @@ body{
 .navigation-bar .perfil img{
     width: 3em;
     height: auto;
-    border: 3px solid var(--primary-purple);
     border-radius: 50%;
     cursor: pointer;
     transition: transform .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
