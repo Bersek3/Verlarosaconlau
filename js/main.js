@@ -84,10 +84,10 @@ function VideoContainerLoad(){
         }  
     }
     
-    function changeSource(url){
+    function changeSource(url) {
         var video = element.video;
         video.src = url;
-        //video.play();
+        video.play(); // Asegúrate de iniciar la reproducción después de cambiar la fuente
     }
     
 
@@ -167,17 +167,16 @@ element.velocity_container.addEventListener('click', function(e){
 });
 
 
- element.video.addEventListener('ended', ()=>{
-    if(video_dom_controler.flag){
+element.video.addEventListener('ended', () => {
+    if (video_dom_controler.flag) {
         removeAllActiveClass();
-        if(video_dom_controler.selected + 1 < total_video) video_dom_controler.selected += 1;
+        if (video_dom_controler.selected + 1 < total_video) video_dom_controler.selected += 1;
         else video_dom_controler.selected = 0;
         changeSource(video_dom_controler.src_video[video_dom_controler.selected]);
         element.video_title.innerHTML = playlist.media[video_dom_controler.selected].title;
         activate(video_dom_controler.selected);
     }
 });
-
 
 element.btn_undo.addEventListener('click',()=>{
     element.video.currentTime -= 10;
@@ -189,10 +188,10 @@ element.btn_redo.addEventListener('click', ()=>{
 
 
 
-element.video_list.addEventListener('click', (e)=>{
+element.video_list.addEventListener('click', (e) => {
     let event = e.target;
     let index = getIndex(event.lastChild.textContent);
-    if(index != -1){
+    if (index != -1) {
         removeAllActiveClass();
         video_dom_controler.selected = index;
         event.classList.add('active-video-list');
