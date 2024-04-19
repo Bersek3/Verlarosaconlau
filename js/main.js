@@ -31,26 +31,23 @@ let playlist = {
             title: 'El Huerfano (16 Abril 2024)',
             desription: 'Iker es un hijo ejemplar, pero cae en las redes de Giovanna, la hija de la mujer con quien su padre rehace su vida.',
             duration: '',
-            src: ''
         },
         {
             title: 'La lista MILF, bajas pasiones (17 Abril 2024)',
             desription: '',
             duration: '',
-            src: 'https://rosadeguadalupe.blob.core.windows.net/videos/milf.mp4'
         },
         {
             title: 'Ser soltera esta de moda (15 Abril 2024)',
             desription: '',
             duration: '',
-            src: 'https://rosadeguadalupe.blob.core.windows.net/videos/Estar_soltera.mp4'
         },
-        // Resto de los elementos del array playlist.media permanecen iguales...
     ],
 };
 
-
-video_dom_controler.src_video.push(element.video.src);
+element.video_array.forEach(vid =>{
+    video_dom_controler.src_video.push(vid.src);
+ });
 
 let total_video = element.video_array.reduce((total, next)=>{
     return total + 1;
@@ -81,13 +78,16 @@ function VideoContainerLoad(){
              element.video_list.appendChild(list);
         }  
     }
-    
+
     function changeSource(url) {
         var video = element.video;
+        var wasPlaying = !video.paused; // Verificar si el video estaba reproduciéndose
         video.src = url;
-        video.play();
+        video.load(); // Cargar el nuevo video
+        if (wasPlaying) {
+            video.play(); // Reproducir el nuevo video si estaba reproduciéndose anteriormente
+        }
     }
-
     function checkedRadio(){
         element.input_velocity.forEach(cur => {
             cur.checked = false;
@@ -99,7 +99,7 @@ function VideoContainerLoad(){
 
     function init(){
         render();
-        changeSource(playlist.media[0].src); // Cambia el origen del primer video al iniciar
+        changeSource(video_dom_controler.src_video[0]);
         checkedRadio();
         activate(0);
     }
@@ -164,13 +164,11 @@ element.velocity_container.addEventListener('click', function(e){
 });
 
 
-element.video.addEventListener('ended', () => {
-    if (video_dom_controler.flag) {
+ element.video.addEventListener('ended', ()=>{
+    if(video_dom_controler.flag){
         removeAllActiveClass();
-        if (video_dom_controler.selected + 1 < total_video) 
-            video_dom_controler.selected += 1;
-        else 
-            video_dom_controler.selected = 0;
+        if(video_dom_controler.selected + 1 < total_video) video_dom_controler.selected += 1;
+        else video_dom_controler.selected = 0;
         changeSource(video_dom_controler.src_video[video_dom_controler.selected]);
         element.video_title.innerHTML = playlist.media[video_dom_controler.selected].title;
         activate(video_dom_controler.selected);
@@ -178,15 +176,15 @@ element.video.addEventListener('ended', () => {
 });
 
 
-element.btn_undo.addEventListener('click',()=>{
+element.btn_undo.addEventListener('click', () => {
+    // Retrocede 10 segundos
     element.video.currentTime -= 10;
 });
 
-element.btn_redo.addEventListener('click', ()=>{
+element.btn_redo.addEventListener('click', () => {
+    // Avanza 10 segundos
     element.video.currentTime += 10;
 });
-
-
 
 element.video_list.addEventListener('click', (e)=>{
     let event = e.target;
@@ -235,6 +233,7 @@ element.btn_forward.addEventListener('click',()=>{
     element.video_title.innerHTML = playlist.media[video_dom_controler.selected].title;
     activate(video_dom_controler.selected);
 });
+
 
 
 
