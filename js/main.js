@@ -31,17 +31,17 @@ let playlist = {
             title: 'El Huerfano (16 Abril 2024)',
             desription: 'Iker es un hijo ejemplar, pero cae en las redes de Giovanna, la hija de la mujer con quien su padre rehace su vida.',
             duration: '',
-            src: 'https://rosadeguadalupe.blob.core.windows.net/videos/el_huerfano.mp4'
+            src: ''
         },
         {
             title: 'La lista MILF, bajas pasiones (17 Abril 2024)',
-            desription: 'Iker es un hijo ejemplar, pero cae en las redes de Giovanna, la hija de la mujer con quien su padre rehace su vida.',
+            desription: '',
             duration: '',
             src: 'https://rosadeguadalupe.blob.core.windows.net/videos/milf.mp4'
         },
         {
             title: 'Ser soltera esta de moda (15 Abril 2024)',
-            desription: 'Iker es un hijo ejemplar, pero cae en las redes de Giovanna, la hija de la mujer con quien su padre rehace su vida.',
+            desription: '',
             duration: '',
             src: 'https://rosadeguadalupe.blob.core.windows.net/videos/Estar_soltera.mp4'
         },
@@ -50,9 +50,7 @@ let playlist = {
 };
 
 
-element.video_array.forEach(vid =>{
-    video_dom_controler.src_video.push(vid.src);
- });
+video_dom_controler.src_video.push(element.video.src);
 
 let total_video = element.video_array.reduce((total, next)=>{
     return total + 1;
@@ -85,11 +83,10 @@ function VideoContainerLoad(){
     }
     
     function changeSource(url) {
-        var video = element.media;
+        var video = element.video;
         video.src = url;
-        video.play(); // Asegúrate de iniciar la reproducción después de cambiar la fuente
+        video.play();
     }
-    
 
     function checkedRadio(){
         element.input_velocity.forEach(cur => {
@@ -120,7 +117,7 @@ function getIndex(str){
 }
 
 function changeSource(url){
-    var video = element.media;
+    var video = element.video;
     video.src = url;
     video.play();
 }
@@ -170,13 +167,16 @@ element.velocity_container.addEventListener('click', function(e){
 element.video.addEventListener('ended', () => {
     if (video_dom_controler.flag) {
         removeAllActiveClass();
-        if (video_dom_controler.selected + 1 < total_video) video_dom_controler.selected += 1;
-        else video_dom_controler.selected = 0;
+        if (video_dom_controler.selected + 1 < total_video) 
+            video_dom_controler.selected += 1;
+        else 
+            video_dom_controler.selected = 0;
         changeSource(video_dom_controler.src_video[video_dom_controler.selected]);
         element.video_title.innerHTML = playlist.media[video_dom_controler.selected].title;
         activate(video_dom_controler.selected);
     }
 });
+
 
 element.btn_undo.addEventListener('click',()=>{
     element.video.currentTime -= 10;
@@ -188,10 +188,10 @@ element.btn_redo.addEventListener('click', ()=>{
 
 
 
-element.video_list.addEventListener('click', (e) => {
+element.video_list.addEventListener('click', (e)=>{
     let event = e.target;
     let index = getIndex(event.lastChild.textContent);
-    if (index != -1) {
+    if(index != -1){
         removeAllActiveClass();
         video_dom_controler.selected = index;
         event.classList.add('active-video-list');
