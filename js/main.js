@@ -28,7 +28,7 @@ let video_dom_controler = {
 let playlist = {
     media: [
         {
-            title: 'La hiaj perfecta (19 Abril 2024)',
+            title: 'La hija perfecta (19 Abril 2024)',
             desription: '',
             duration: '',
         },
