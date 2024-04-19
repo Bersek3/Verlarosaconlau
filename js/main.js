@@ -33,12 +33,12 @@ let playlist = {
             duration: '',
         },
         {
-            title: 'La lista MILF, bajas pasiones (17 Abril 2024)',
+            title: 'La lista MILF, bajas pasiones (15 Abril 2024)',
             desription: '',
             duration: '',
         },
         {
-            title: 'Ser soltera esta de moda (15 Abril 2024)',
+            title: 'Ser soltera esta de moda (14 Abril 2024)',
             desription: '',
             duration: '',
         },
