@@ -85,7 +85,7 @@ function VideoContainerLoad(){
     }
     
     function changeSource(url) {
-        var video = element.video;
+        var video = element.media;
         video.src = url;
         video.play(); // Asegúrate de iniciar la reproducción después de cambiar la fuente
     }
