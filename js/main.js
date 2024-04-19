@@ -28,12 +28,22 @@ let video_dom_controler = {
 let playlist = {
     media: [
         {
-            title: 'El Huerfano (16 Abril 2024)',
-            desription: 'Iker es un hijo ejemplar, pero cae en las redes de Giovanna, la hija de la mujer con quien su padre rehace su vida.',
+            title: 'La hiaj perfecta (19 Abril 2024)',
+            desription: '',
             duration: '',
         },
         {
-            title: 'La lista MILF, bajas pasiones (15 Abril 2024)',
+            title: 'El Huerfano (18 Abril 2024)',
+            desription: '',
+            duration: '',
+        },
+        {
+            title: 'La lista MILF, bajas pasiones (17 Abril 2024)',
+            desription: '',
+            duration: '',
+        },
+        {
+            title: 'Mi papá',
             desription: '',
             duration: '',
         },
