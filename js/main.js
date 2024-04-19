@@ -43,7 +43,7 @@ let playlist = {
             duration: '',
         },
         {
-            title: 'Mi papá',
+            title: 'Mi papá (16 de Abril 2024)',
             desription: '',
             duration: '',
         },
