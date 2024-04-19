@@ -28,7 +28,7 @@ let video_dom_controler = {
 let playlist = {
     media: [
         {
-            title: 'El Huerfano (18 Abril 2024)',
+            title: 'El Huerfano (16 Abril 2024)',
             desription: 'Iker es un hijo ejemplar, pero cae en las redes de Giovanna, la hija de la mujer con quien su padre rehace su vida.',
             duration: '',
             src: 'https://rosadeguadalupe.blob.core.windows.net/videos/el_huerfano.mp4'
@@ -37,7 +37,13 @@ let playlist = {
             title: 'La lista MILF, bajas pasiones (17 Abril 2024)',
             desription: '',
             duration: '',
-            src: ''
+            src: 'https://rosadeguadalupe.blob.core.windows.net/videos/milf.mp4'
+        },
+        {
+            title: 'Ser soltera esta de moda (15 Abril 2024)',
+            desription: '',
+            duration: '',
+            src: 'https://rosadeguadalupe.blob.core.windows.net/videos/Estar_soltera.mp4'
         },
         // Resto de los elementos del array playlist.media permanecen iguales...
     ],
