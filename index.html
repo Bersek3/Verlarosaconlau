@@ -144,7 +144,17 @@
             </div>
             <footer>
                 <img src="https://rosadeguadalupe.blob.core.windows.net/videos/Screenshot_20240313_111452_Facebook.jpg" alt="Foto del footer">
+                <map name="soundMap">
+                    <area shape="rect" coords="0,0,100,100" onclick="reproducirSonido('https://rosadeguadalupe.blob.core.windows.net/videos/payaso.mp3')">
+                    <!-- Puedes agregar más áreas aquí -->
+                </map>
             </footer>
             <script src="js/main.js" defer></script>
+            <script>
+                function reproducirSonido(urlSonido) {
+                    var sonido = new Audio(urlSonido);
+                    sonido.play();
+                }
+            </script>
         </body>
     </html>
