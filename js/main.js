@@ -35,13 +35,13 @@ let playlist = {
         },
         {
             title: 'La lista MILF, bajas pasiones (17 Abril 2024)',
-            desription: '',
+            desription: 'Iker es un hijo ejemplar, pero cae en las redes de Giovanna, la hija de la mujer con quien su padre rehace su vida.',
             duration: '',
             src: 'https://rosadeguadalupe.blob.core.windows.net/videos/milf.mp4'
         },
         {
             title: 'Ser soltera esta de moda (15 Abril 2024)',
-            desription: '',
+            desription: 'Iker es un hijo ejemplar, pero cae en las redes de Giovanna, la hija de la mujer con quien su padre rehace su vida.',
             duration: '',
             src: 'https://rosadeguadalupe.blob.core.windows.net/videos/Estar_soltera.mp4'
         },
@@ -120,7 +120,7 @@ function getIndex(str){
 }
 
 function changeSource(url){
-    var video = element.video;
+    var video = element.media;
     video.src = url;
     video.play();
 }
