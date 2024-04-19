@@ -142,19 +142,53 @@
                     
                 </div>
             </div>
-            <footer>
-                <img src="https://rosadeguadalupe.blob.core.windows.net/videos/Screenshot_20240313_111452_Facebook.jpg" alt="Foto del footer">
-                <map name="soundMap">
-                    <area shape="rect" coords="0,0,100,100" onclick="reproducirSonido('https://rosadeguadalupe.blob.core.windows.net/videos/payaso.mp3')">
-                    <!-- Puedes agregar más áreas aquí -->
-                </map>
-            </footer>
+            <div class="contenedor">
+                <img src="https://rosadeguadalupe.blob.core.windows.net/videos/Screenshot_20240313_111452_Facebook.jpg" alt="Imagen" id="imagen">
+                <button id="boton" class="boton-payaso"></button>
+                <audio id="sonido">
+                    <source src="https://rosadeguadalupe.blob.core.windows.net/videos/payaso.mp3" type="audio/mp3">
+                    Tu navegador no soporta la reproducción de audio.
+                  </audio>
+                </div>
+              </div>
             <script src="js/main.js" defer></script>
-            <script>
-                function reproducirSonido(urlSonido) {
-                    var sonido = new Audio(urlSonido);
-                    sonido.play();
-                }
-            </script>
+            <script >
+                var sonido = new Audio();
+                sonido.src="https://rosadeguadalupe.blob.core.windows.net/videos/payaso.mp3";
+
+                var boton = document.getElementById('boton');
+var imagen = document.getElementById('imagen');
+var contenedor = document.querySelector('.contenedor');
+var sonido = document.getElementById('sonido');
+
+var offsetX, offsetY;
+
+boton.addEventListener('mousedown', function(e) {
+  e.preventDefault();
+  offsetX = e.clientX - boton.getBoundingClientRect().left;
+  offsetY = e.clientY - boton.getBoundingClientRect().top;
+  
+  document.addEventListener('mousemove', onMouseMove);
+  document.addEventListener('mouseup', onMouseUp);
+  
+  // Reproducir el sonido
+  sonido.play();
+});
+
+function onMouseMove(e) {
+  var x = e.clientX - offsetX;
+  var y = e.clientY - offsetY;
+
+  boton.style.left = x + 'px';
+  boton.style.top = y + 'px';
+}
+
+function onMouseUp() {
+  document.removeEventListener('mousemove', onMouseMove);
+  document.removeEventListener('mouseup', onMouseUp);
+}
+                
+                </script>
+                
         </body>
     </html>
