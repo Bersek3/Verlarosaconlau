@@ -204,6 +204,10 @@ p#texto1 {
     --hover: #ef8f6e;
 }
 
+video#video {
+    margin-top: 39px;
+}
+
 .video-button {
     background: none;
     border: 2px solid;
