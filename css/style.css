@@ -88,7 +88,7 @@ body{
     /* position: absolute; */
     bottom: 10px;
     left: 10px;
-    margin-top: -582px;
+
     margin-left: 174px;
     color: white;
     font-family: Arial, sans-serif;
@@ -96,6 +96,7 @@ body{
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     z-index: 999;
+    font-family: cursive;
 }
 .navigation-bar{
     display: flex;
@@ -120,10 +121,10 @@ body{
     -o-user-select: none;
     -ms-user-select: none;
 }
-.navigation-bar a h1{
-    padding-left: 1.5rem;
+.navigation-bar a h1 {
+    padding-left: 32.5rem;
+    font-family: cursive;
 }
-
 .navigation-bar .perfil{
     display: flex;
     align-items: center;
@@ -145,20 +146,33 @@ body{
 .navigation-bar .perfil .prefil-name h2:nth-child(2){
     font-weight: 100;
 }
-.navigation-bar .perfil img{
+.navigation-bar .perfil img {
     width: 3em;
     height: auto;
-    border: 3px solid var(--primary-purple);
-    border-radius: 50%;
+    margin-top: 25px;
+    /* border: 3px solid var(--primary-purple); */
+    /* border-radius: 50%; */
     cursor: pointer;
     transition: transform .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-.navigation-bar .perfil img:hover{
-    transform: scale(1.3);
+
+img#lash {
+    margin-left: 34px;
+    margin-right: 59px;
 }
-/*
-* Container
-*/
+
+p#texto2 {
+    margin-left: -8px;
+    margin-top: 11px;
+    font-family: cursive;
+}
+
+
+p#texto1 {
+    margin-left: 42px;
+    font-family: cursive;
+}
+
 .container-1{
     margin-top: 100px;
     padding: 20px;
@@ -187,6 +201,26 @@ body{
 }
 
 
+.video-button {
+    background-color: #7a3f85;; /* Color de fondo */
+    border: none;
+    color: white; /* Color del texto */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave en el cambio de color */
+    font-family: cursive;
+}
+
+/* Estilo al pasar el mouse por encima */
+.video-button:hover {
+    background-color: #9c6f9a; /* Color de fondo más oscuro */
+}
 
 .container-video-list{
     background-color: var(--tertiary-black);
