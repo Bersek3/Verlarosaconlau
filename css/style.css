@@ -201,9 +201,13 @@ p#texto1 {
 
 
 
+.video-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
-
-.video-button {
+.video-list li {
     --c: goldenrod;
     color: var(--c);
     font-size: 16px;
@@ -222,6 +226,43 @@ p#texto1 {
     z-index: 1;
     transition: 0.5s;
     margin: 1em;
+}
+
+.video-list li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.video-list li:hover {
+    color: black;
+}
+
+.video-list li:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.video-list li span:nth-child(1) {
+    --n: 1;
+}
+
+.video-list li span:nth-child(2) {
+    --n: 2;
+}
+
+.video-list li span:nth-child(3) {
+    --n: 3;
+}
+
+.video-list li span:nth-child(4) {
+    --n: 4;
 }
 
 
