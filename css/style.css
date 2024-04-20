@@ -199,31 +199,30 @@ p#texto1 {
     object-fit: contain;
 }
 
-.video-button {
-    --color: #ef6eae;
-    --hover: #ef8f6e;
-}
 
-video#video {
-    margin-top: 39px;
-}
+
+
 
 .video-button {
-    background: none;
-    border: 2px solid;
-    font: inherit;
-    line-height: 1;
-    margin: 0.5em;
-    padding: 1em 2em;
+    --c: goldenrod;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
 }
-
-.video-button {
-    color: var(--color);
-    transition: 0.25s;
-}
-
-.video-button, select {
-    text-transform: none;
 }
 
 .container-video-list{
