@@ -51,9 +51,9 @@ html{scroll-behavior: smooth;}
   
   #imagen {
     width: 100%;
-    margin-left: 10px;
+    margin-left: 36px;
     height: auto;
-    margin-top: -1048px;
+    margin-top: -477px;
     border-radius: 17px;
 }
 body{
@@ -64,6 +64,10 @@ body{
 /*
 *   Navigaiton Bar Style
 */
+
+video#video {
+    margin-top: 38px;
+}
 
 .boton-payaso {
     width: 46;
@@ -179,14 +183,13 @@ p#texto1 {
     font-family: cursive;
 }
 
-.container-1{
-    margin-top: 100px;
+.container-1 {
+    margin-top: 59px;
     padding: 20px;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
 }
-
 .container-video{
     margin: 10px;
     border-top-right-radius: 10px;
@@ -228,13 +231,13 @@ p#texto1 {
     background-color: #9c6f9a; /* Color de fondo más oscuro */
 }
 
-.container-video-list{
+.container-video-list {
     background-color: var(--tertiary-black);
-    height: 30em;
+    height: 34em;
     width: 20em;
     padding: 2em;
     border-radius: 5px;
-    margin: 10px;
+    margin: -33px;
 }
 
 .controlers{
