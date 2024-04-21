@@ -92,8 +92,8 @@ video#video {
     /* position: absolute; */
     bottom: 10px;
     left: 10px;
-
-    margin-left: 174px;
+    margin-left: 66px;
+    margin-top: -29px;
     color: white;
     font-family: Arial, sans-serif;
     font-size: 14px;
@@ -102,7 +102,6 @@ video#video {
     z-index: 999;
     font-family: cursive;
 }
-
 video#video {
     margin-top: 35px;
 }
