@@ -52,6 +52,11 @@ ul, ol{
     webkit-padding: 0;
     moz-padding: 0;
 }
+
+span {
+    font-family: cursive;
+}
+
 .gap {
     margin-bottom: 50px;
 }
@@ -92,6 +97,7 @@ ul, ol{
     font-size: 22px;
     color: #fff;
     font-weight: 900;
+    font-family: cursive;
 }
 #art-menu a.navbar-brand:hover{
     color: #c92381;
@@ -112,6 +118,8 @@ ul, ol{
     color: #c92381 !important;
     background-color: transparent;
     font-weight: 700;
+    font-family: cursive;
+
 }
 
 .navbar-toggle {
@@ -151,10 +159,12 @@ ul, ol{
     height: 750px;
     background-attachment: fixed;
 background: rgba(7, 2, 4, 0.77);
+
 }
 
 #home p.lead{
     color: #fff;
+    font-family: cursive;
 }
 .white-bg {
   background: #ffffff;
