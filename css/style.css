@@ -33,8 +33,35 @@ h5{
     font-weight: 700;
     line-height: 20px;
 }
-p{
-    font-family: cursive;
+
+
+.navbar-nav li a:hover {
+    color: pink; /* Cambia el color del texto a rosado */
+  }
+
+
+/* Estilos para la sección de créditos */
+.credit-box-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Define columnas de tamaño flexible */
+    grid-gap: 20px; /* Espacio entre los recuadros */
+    justify-content: center; /* Centra los recuadros horizontalmente */
+  }
+  
+  .credit-box {
+    text-align: center;
+  }
+  
+  .credit-box img {
+    width: 100px;
+    height: 100px;
+    
+  }
+
+
+
+  p {
+    margin: 19px 0 10px;
 }
 p.lead{
     font-size: 16px;
@@ -336,9 +363,10 @@ background: rgba(7, 2, 4, 0.77);
     border:none;
     color:#fff;
 }
-#contact p  , #contact #success_page p {
-    color:#666;
-    text-align:center;
+#contact p, #contact #success_page p {
+    color: white;
+    text-align: center;
+    font-family: cursive;
 }
 #contact #message fieldset {
     color:#fff;
