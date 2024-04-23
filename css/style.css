@@ -8,6 +8,27 @@ body, html{
     overflow-x: hidden;
     background: #2F3238;
 }
+
+/* Estilos personalizados para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Color de fondo de la pista de la barra de desplazamiento */
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #c92381; /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 5px; /* Bordes redondeados del pulgar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: transparent; /* Color del pulgar de la barra de desplazamiento al pasar el mouse */
+}
+
 h1{
     text-transform: none;
 }
