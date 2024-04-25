@@ -14,4 +14,3 @@ Add the title and corresponding video information to the playlist object
 <iframe width="640" height="360" frameborder="0" src="" allowfullscreen ></iframe><iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/jA9wRCJb#9oEljR3Nmq9SFAXLW82qwwnSWH1zj4vqJ3vzMPCux4M" allowfullscreen ></iframe>
 
 
-<iframe width="640" height="360" frameborder="0" src="" allowfullscreen ></iframe>
