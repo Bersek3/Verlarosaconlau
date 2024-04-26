@@ -7,6 +7,7 @@ body, html{
     color: #fff;
     overflow-x: hidden;
     background: #2F3238;
+    cursor: url('../img/cursor.png'), auto;
 }
 
 /* Estilos personalizados para la barra de desplazamiento */
@@ -31,6 +32,7 @@ body, html{
 
 h1{
     text-transform: none;
+    text-align: center;
 }
 h1 strong{
     font-weight: 800;
@@ -191,7 +193,7 @@ span {
 	}
 }
 #home {
-    background: url(https://scontent.fzal1-1.fna.fbcdn.net/v/t39.30808-6/269755175_446263136866424_3601202009351685686_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG3bAEJy_XXlQSa7ejyJJL1dBVpwwCO98h0FWnDAI73yBf8AIGqRYbpc_KO5FupXIs&_nc_ohc=NzPajXLVB6AQ7kNvgE_oiqH&_nc_ht=scontent.fzal1-1.fna&oh=00_AfCFNF3HWlOBfg8X6kFqNJ0r_zsp2B01xDK0X8vfV2OHSQ&oe=663134EE);
+    background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/5752d564-cf61-40da-8ac9-6f7d1407f011-profile_banner-480.jpeg);
     background-size: cover;
     background-position: center;
     /* background-attachment: fixed; */
@@ -282,6 +284,7 @@ background: rgba(7, 2, 4, 0.77);
     padding-top: 45px;
     padding-bottom: 0;
     padding: 90px 0;
+    margin-top: -141px;
 
 }
 #contact ::selection {
@@ -657,3 +660,24 @@ a.fa.fa-angle-down:hover{
     -o-transition: 500ms;
     transition: 500ms;
 }
+.slow {
+    animation-duration: 2s; /* Ajusta el valor según lo que desees */
+  }
+#screamer {
+    display: none; /* Oculta el screamer inicialmente */
+    position: fixed;
+    bottom: -100%; /* Mueve el screamer fuera de la pantalla */
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Asegura que esté sobre otros elementos */
+    animation: slide-up 1s forwards; /* Aplica la animación de deslizamiento */
+  }
+  
+  @keyframes slide-up {
+    from {
+      bottom: -100%; /* Inicia fuera de la pantalla */
+    }
+    to {
+      bottom: 0; /* Desliza hacia arriba */
+    }
+  }

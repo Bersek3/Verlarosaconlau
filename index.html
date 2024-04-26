@@ -44,85 +44,84 @@
             <a href="#portfolio" class="fa fa-angle-down scroll-nav"></a>
         </div>
     </div>
-
 </div>
 
 
 <!-- Sección de Capítulos -->
-<div id="portfolio" class="text-center">
-    <div class="section-title center">
-        <h2>CAPITULOS</h2>
-        <div class="line">
-
-        </div>
-    </div>
-    <!-- Botones de paginación -->
-<div class="pagination">
-    <a href="#portfolio" class="prev">&#10094; Anterior</a>
-    <a href="#portfolio" class="next">Siguiente &#10095;</a>
+<div id="portfolio" class="text-center animated slideInUp slow">
+  <div class="section-title center">
+      <h2>CAPITULOS</h2>
+      <div class="line"></div>
   </div>
-    <div class="container">
+  <!-- Botones de paginación -->
+
+
+  <div class="container">
       <!-- Contenido de la sección de Capítulos -->
       <ul class="portfolio-items col-4">
-        <!-- Aquí se cargarán dinámicamente los capítulos desde capitulos.html -->
+          <!-- Aquí se cargarán dinámicamente los capítulos desde capitulos.html -->
       </ul>
-
-    </div>
   </div>
+  <div class="pagination">
+    <a href="#portfolio" class="prev">&#10094; Anterior</a>
+    <a href="#portfolio" class="next">Siguiente &#10095;</a>
+</div>
+</div>
+
 <!-- Sección de Créditos -->
-<div id="contact" class="text-center">
-    <div class="container">
+<div id="contact" class="text-center animated slideInUp slow">
+  <div class="container">
       <!-- Contenido de la sección de Créditos -->
       <div class="section-title center">
-        <h2>CREDITOS</h2>
-        <div class="line"></div>
+          <h2>CREDITOS</h2>
+          <div class="line"></div>
       </div>
       <div class="gap"></div>
-  
+
       <!-- Recuadros de créditos en forma de cuadrícula -->
       <div class="credit-box-grid">
-        <!-- Recuadro de crédito -->
-        <div class="credit-box">
-          <img src="img/goma_naranja.png" alt="Fan_d_laugamerCO">
-          <p>OTRA_FAN D LAUGAMERCO</p>
-        </div>
-        
-        <!-- Recuadro de crédito -->
-        <div class="credit-box">
-          <img src="img/goma_azul.png" alt="Cris_XDN">
-          <p>CRIS XDN'T</p>
-        </div>
-        
-        <!-- Recuadro de crédito -->
-        <div class="credit-box">
-          <img src="img/goma_roja.png" alt="D4N13L">
-          <p>D4N13L C0R0N4D0
-          </p>
-        </div>
-        
-        <!-- Recuadro de crédito -->
-        <div class="credit-box">
-          <img src="img/goma_verde.png" alt="Fonder">
-          <p>FONDER25</p>
-        </div>
-
-         <!-- Recuadro de crédito -->
-         <div class="credit-box">
-             <img src="img/goma_morada.png" alt="Bersek">
-             <p>BERSEK</p>
-           </div>
-           
-         <!-- Recuadro de crédito -->
-         <div class="credit-box">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/160px-Boca_Juniors_logo18.svg.png"  alt="Lash">
-            <p>LASH QAC</p>
+          <!-- Recuadro de crédito -->
+          <div class="credit-box">
+              <img src="/img/goma_naranja.png" alt="Nombre1">
+              <p>OTRA_FAN D LAUGAMERCO</p>
           </div>
-        
-        <!-- Agrega más recuadros de crédito según sea necesario -->
-  
+
+          <!-- Recuadro de crédito -->
+          <div class="credit-box">
+              <img src="/img/goma_azul.png" alt="Nombre2">
+              <p>CRIS XDN'T</p>
+          </div>
+
+          <!-- Recuadro de crédito -->
+          <div class="credit-box">
+              <img src="/img/goma_roja.png" alt="Nombre1">
+              <p>D4N13L C0R0N4D0</p>
+          </div>
+
+          <!-- Recuadro de crédito -->
+          <div class="credit-box">
+              <img src="/img/goma_verde.png" alt="Nombre2">
+              <p>FONDER25</p>
+          </div>
+
+          <!-- Recuadro de crédito -->
+          <div class="credit-box">
+              <img src="/img/goma_morada.png" alt="Nombre2">
+              <p>BERSEK</p>
+          </div>
+
+          <!-- Recuadro de crédito -->
+          <div class="credit-box">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/160px-Boca_Juniors_logo18.svg.png"  alt="Nombre2">
+              <p>LASH QAC</p>
+          </div>
+
+          <!-- Agrega más recuadros de crédito según sea necesario -->
       </div>
-    </div>
   </div>
+</div>
+
+
 
   <!-- Footer -->
   <footer id="footer">
@@ -232,6 +231,73 @@
       });
     });
   </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var creditsSection = document.getElementById('contact');
+    var animationClass = 'slide-in-up';
+    var animationTriggered = false;
+
+    function toggleCreditAnimation() {
+      var isElementVisible = isElementInViewport(creditsSection);
+      if (isElementVisible && !animationTriggered) {
+        creditsSection.classList.add(animationClass);
+        animationTriggered = true;
+      }
+    }
+
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+      );
+    }
+
+    window.addEventListener('scroll', function() {
+      toggleCreditAnimation();
+    });
+
+    // Para que la animación se active al cargar la página
+    toggleCreditAnimation();
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      var portfolioSection = document.getElementById('portfolio');
+      var animationClass = 'slide-in-up';
+      var animationTriggered = false;
+
+      function togglePortfolioAnimation() {
+          var isElementVisible = isElementInViewport(portfolioSection);
+          if (isElementVisible && !animationTriggered) {
+              portfolioSection.classList.add(animationClass);
+              animationTriggered = true;
+          }
+      }
+
+      function isElementInViewport(el) {
+          var rect = el.getBoundingClientRect();
+          return (
+              rect.top >= 0 &&
+              rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+          );
+      }
+
+      window.addEventListener('scroll', function() {
+          togglePortfolioAnimation();
+      });
+
+      // Para que la animación se active al cargar la página
+      togglePortfolioAnimation();
+
+      // Event listener para detectar cambios en el tamaño de la ventana
+      window.addEventListener('resize', function() {
+          togglePortfolioAnimation();
+      });
+  });
+</script>
   
 </body>
 </html>
