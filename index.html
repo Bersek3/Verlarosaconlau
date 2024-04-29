@@ -8,8 +8,10 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css\loader..css">
 </head>
 <body>
+
   <!-- Menú de navegación -->
   <nav id="art-menu" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -23,6 +25,7 @@
             </button>
           <a class="navbar-brand" href="">La rosa de Guadalupe con Lau</a>
         </div>
+        
 
         <!-- Navigation Toggling -->
         <div class="collapse navbar-collapse" id="navbar-collasped">
@@ -42,33 +45,47 @@
             <h1><strong><span>¿Quieres ver la Rosa de Guadalupe?</span></strong></h1>
             <p class="lead">Sigan Viendo !!</p>
             <a href="#portfolio" class="fa fa-angle-down scroll-nav"></a>
+
         </div>
+        <span class="_2PK31"></span>
     </div>
 
 </div>
 
 
 <!-- Sección de Capítulos -->
+
 <div id="portfolio" class="text-center animated slideInUp slow">
+
+
   <div class="section-title center">
-      <h2>CAPITULOS</h2>
-      <div class="line"></div>
+    <h2>CAPITULOS</h2>
+    <div class="line"></div>
   </div>
   <!-- Botones de paginación -->
 
   <div class="pagination">
     <a href="#portfolio" class="prev">&#10094; Anterior</a>
     <a href="#portfolio" class="next">Siguiente &#10095;</a>
-</div>
-  <div class="container">
-      <!-- Contenido de la sección de Capítulos -->
-      <ul class="portfolio-items col-4">
-          <!-- Aquí se cargarán dinámicamente los capítulos desde capitulos.html -->
-          
-      </ul>
-
   </div>
+
+  <div class="container">
+    <!-- Contenido de la sección de Capítulos -->
+    <ul class="portfolio-items col-4">
+      <!-- Aquí se cargarán dinámicamente los capítulos desde capitulos.html -->
+    </ul>
+  </div>
+
+  <!-- Imagen en el lado derecho -->
+  <div class="right-image">
+    <img class="rosa-derecha" src="img\rosa.png" alt="Imagen derecha">
+  </div>
+    <!-- Imagen en el lado izquierdo -->
+    <div class="left-image">
+      <img class="rosa-izquierda" src="img\rosa.png" alt="Imagen derecha">
+    </div>
 </div>
+
 
 <!-- Sección de Créditos -->
 <div id="contact" class="text-center animated slideInUp slow">
@@ -84,31 +101,31 @@
       <div class="credit-box-grid">
           <!-- Recuadro de crédito -->
           <div class="credit-box">
-              <img src="img/goma_naranja.png" alt="Nombre1">
+              <img src="/img/goma_naranja.png" alt="Nombre1">
               <p>OTRA_FAN D LAUGAMERCO</p>
           </div>
 
           <!-- Recuadro de crédito -->
           <div class="credit-box">
-              <img src="img/goma_azul.png" alt="Nombre2">
+              <img src="/img/goma_azul.png" alt="Nombre2">
               <p>CRIS XDN'T</p>
           </div>
 
           <!-- Recuadro de crédito -->
           <div class="credit-box">
-              <img src="img/goma_roja.png" alt="Nombre1">
+              <img src="/img/goma_roja.png" alt="Nombre1">
               <p>D4N13L C0R0N4D0</p>
           </div>
 
           <!-- Recuadro de crédito -->
           <div class="credit-box">
-              <img src="img/goma_verde.png" alt="Nombre2">
+              <img src="/img/goma_verde.png" alt="Nombre2">
               <p>FONDER25</p>
           </div>
 
           <!-- Recuadro de crédito -->
           <div class="credit-box">
-              <img src="img/goma_morada.png" alt="Nombre2">
+              <img src="/img/goma_morada.png" alt="Nombre2">
               <p>BERSEK</p>
           </div>
 
@@ -300,6 +317,14 @@
       });
   });
 </script>
-  
+<script>
+    // Espera a que la página se cargue completamente
+    window.addEventListener('load', function() {
+        // Oculta el preloader después de 3 segundos (3000 milisegundos)
+        setTimeout(function() {
+            document.querySelector('.preloader-2').style.display = 'none';
+        }, 3000);
+    });
+</script>
 </body>
 </html>
