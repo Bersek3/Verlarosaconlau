@@ -684,7 +684,7 @@ span {
     position: absolute;
     width: 100%;
     height: 135px;
-    background: linear-gradient(0deg, #1e1e1e, rgb(30 30 30) 28.22%, rgba(12, 12, 12, .13) 81.93%, rgba(12, 12, 12, 0));
+    background: linear-gradient(0deg, #1e1e1e, rgb(255 0 143 / 9%) 28.22%, rgba(12, 12, 12, .13) 81.93%, rgba(12, 12, 12, 0));
     /* bottom: 0; */
     margin-left: -956px;
 }
