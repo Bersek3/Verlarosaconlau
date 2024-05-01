@@ -156,7 +156,7 @@ ul, ol{
     color: #fff;
     font-weight: 900;
     font-family: cursive;
-    margin-left: -202px;
+    margin-left: -178px;
 }
 span {
     font-family: cursive;
@@ -701,18 +701,18 @@ span {
 }
 
 img.rosa-derecha {
-    margin-left: 1543px;
+    margin-left: 1347px;
     width: 300px;
-    margin-top: -660px;
+    margin-top: -613px;
     opacity: 0.5;
 }
 div#portfolio {
     margin-left: -32px;
 }
 img.rosa-izquierda {
-    margin-left: -1543px;
+    margin-left: -1420px;
     width: 275px;
-    margin-top: -706px;
+    margin-top: -689px;
     transform: rotateY(180deg);
     opacity: 0.5;
 }
