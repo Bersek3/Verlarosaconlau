@@ -45,98 +45,48 @@
         <div class="content">
             <h1><strong><span>Fan-Art de Crown</span></strong></h1>
             <p class="lead">Sigan Viendo !!</p>
-            <a href="#portfolio" class="fa fa-angle-down scroll-nav"></a>
+            <a href="#galeria" class="fa fa-angle-down scroll-nav"></a>
 
         </div>
-        <span class="_2PK31"></span>
     </div>
 
 </div>
 
 <!-- partial:index.partial.html -->
 <div class="message">
-    Sorry, your browser does not support CSS Grid. 😅
-  </div>
-  <section class="section">
-    <h1>Nom Nom Gallery</h1>
-    <div class="grid">
-      <div class="item">
-        <div class="item__details">
-          jelly-o brownie sweet
-        </div>
-      </div>
-      <div class="item item--large">
-        <div class="item__details">
-          Muffin jelly gingerbread 
-        </div>
-      </div>
-      <div class="item item--medium">
-        <div class="item__details">
-          sesame snaps chocolate
-        </div>
-      </div>
-      <div class="item item--large">
-        <div class="item__details">
-          Oat cake
-        </div>
-      </div>
-      <div class="item item--full">
-        <div class="item__details">
-           jujubes cheesecake
-        </div>
-      </div>
-      <div class="item item--medium">
-        <div class="item__details">
-          Dragée pudding brownie
-        </div>
-      </div>
-      <div class="item item--large">
-        <div class="item__details">
-          Oat cake
-        </div>
-      </div>
-      <div class="item">
-        <div class="item__details">
-          powder toffee
-        </div>
-      </div>
-      <div class="item item--medium">
-        <div class="item__details">
-          pudding cheesecake
-        </div>
-      </div>
-      <div class="item item--large">
-        <div class="item__details">
-          toffee bear claw 
-        </div>
-      </div>
-      <div class="item">
-        <div class="item__details">
-          cake cookie croissant
-        </div>
-      </div>
-      <div class="item item--medium">
-        <div class="item__details">
-          liquorice sweet roll
-        </div>
-      </div>
-      <div class="item item--medium">
-        <div class="item__details">
-          chocolate marzipan
-        </div>
-      </div>
-      <div class="item item--large">
-        <div class="item__details">
-          danish dessert lollipop
-        </div>
-      </div>
-      <div class="item">
-        <div class="item__details">
-          sugar plum dragée
-        </div>
-      </div>
+  Sorry, your browser does not support CSS Grid. 😅
+</div>
+<section class="section">
+  <div class="line" id="galeria"></div>
+  <h1>GALERIA</h1>
+
+  <div class="grid">
+    <div class="item item--large expandable expandable" style="background-image: url('https://i.imgur.com/eoymyqU.png')">
     </div>
+    <!-- Agregar los nuevos enlaces con los ajustes de tamaño -->
+    <div class="item item--large expandable" style="background-image: url('https://i.imgur.com/PppVKuz.jpeg')">
+    </div>
+    <div class="item item--medium expandable" style="background-image: url('https://i.imgur.com/vCajyZp.png')">
+    </div>
+    <div class="item item--medium expandable" style="background-image: url('https://i.imgur.com/cTkhpn1.png')">
+    </div>
+    <div class="item item--medium expandable" style="background-image: url('https://i.imgur.com/1W12gTW.jpeg')">
+    </div>
+    <div class="item item--medium expandable" style="background-image: url('https://i.imgur.com/mPSBqAn.png')">
+    </div>
+    <div class="item item--medium expandable" style="background-image: url('https://i.imgur.com/nOj8V5E.png')">
+    </div>
+    <div class="item item--medium expandable" style="background-image: url('https://i.imgur.com/kG6JPcG.png')">
+    </div>
+    <div class="item item--medium expandable" style="background-image: url('https://i.imgur.com/s7iy9Ka.png')">
+    </div>
+    <div class="item item--medium expandable" style="background-image: url('https://i.imgur.com/K8UJ3BX.jpeg')">
+    </div>
+
+    <!-- Continuar con los demás divs de imágenes -->
   </div>
+</div>
+<!-- partial -->
 
 
 
@@ -169,6 +119,21 @@
     </div>
 </footer>
 
+
+
+<script>  
+
+const expandableImages = document.querySelectorAll('.expandable');
+
+  // Iterar sobre cada imagen y agregar un eventListener para el clic
+  expandableImages.forEach(function(image) {
+    image.addEventListener('click', function() {
+      // Cambiar el tamaño de la imagen al hacer clic
+      this.classList.toggle('expanded');
+    });
+  });
+  </script>
+   <!-- JavaScript para el desplazamiento suave -->
 
 </body>
 </html>
