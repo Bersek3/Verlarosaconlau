@@ -1,6 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
-body, html{
+body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100%;
+
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
@@ -8,6 +13,12 @@ body, html{
     overflow-x: hidden;
     background: #000000a8;
     cursor: url('../img/cursor.png'), auto;
+}
+
+.container {
+    width: 90%; /* Ancho máximo del contenedor */
+    max-width: 1200px; /* Por ejemplo, ajusta según tus necesidades */
+    margin: 0 auto; /* Centrar horizontalmente */
 }
 
 /* Estilos personalizados para la barra de desplazamiento */
