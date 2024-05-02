@@ -53,7 +53,7 @@ h1 {
 
 .grid {
   display: grid;
-  grid-gap: 30px;
+  grid-gap: 20px; /* Espacio entre cada elemento en la cuadrícula */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 150px;
   grid-auto-flow: row dense;
@@ -107,6 +107,8 @@ h1 {
 }
 .item--medium {
   grid-row-end: span 2;
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen dentro del contenedor */
 }
 .item--large {
   grid-row-end: span 3;
@@ -114,10 +116,18 @@ h1 {
 .item--full {
   grid-column-end: auto;
 }
+
+.item--medium[style*='1W12gTW.jpeg'] {
+  background-size: cover;
+}
+
 @media screen and (min-width: 768px) {
   .item--full {
     grid-column: 1/-1;
     grid-row-end: span 2;
+  }
+  .item--medium[style*='1W12gTW.jpeg'] {
+    background-size: cover;
   }
 }
 .item__details {
@@ -137,9 +147,27 @@ h1 {
   padding-right: 0.5em;
   color: #444;
 }
-/* Estilos para la imagen expandida */
 .expandable.expanded {
-  transform: scale(1.2); /* Ajustar el factor de escala según sea necesario */
+  transform: scale(1.4); /* Ajusta el factor de escala según sea necesario */
   transition: transform 0.3s ease; /* Agregar una transición suave */
+  z-index: 1; /* Asigna un valor de z-index más alto para que se muestren por encima */
+}
+.navbar-scroll {
+  transition: top 0.5s ease;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
+.navbar-scroll.hidden {
+  top: -100px; /* Altura del navbar */
+}
+
+.item--large {
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+.item--medium[style*='1W12gTW.jpeg'] {
+  background-size: cover;
+}

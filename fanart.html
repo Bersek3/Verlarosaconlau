@@ -66,11 +66,11 @@
     <!-- Agregar los nuevos enlaces con los ajustes de tamaño -->
     <div class="item item--large expandable" style="background-image: url('https://i.imgur.com/PppVKuz.jpeg')">
     </div>
-    <div class="item item--medium expandable" style="background-image: url('https://i.imgur.com/vCajyZp.png')">
+
+
+    <div class="item item--medium expandable" style="background-image: url('https://i.imgur.com/1W12gTW.jpeg'); background-image: url('https://i.imgur.com/sTEzKHr.png');background-size: contain;background-position: center;width: 571px;">
     </div>
-    <div class="item item--medium expandable" style= "background-image: url('https://i.imgur.com/cTkhpn1.png');     width: 162px;">
-    </div>
-    <div class="item item--medium expandable" style="background-image: url('https://i.imgur.com/1W12gTW.jpeg')">
+    <div class="item item--medium expandable" style= "background-image: url('https://i.imgur.com/cTkhpn1.png');width: 152px;margin-left: 206px;">
     </div>
     <div class="item item--medium expandable" style="background-image: url('https://i.imgur.com/mPSBqAn.png')">
     </div>
@@ -168,6 +168,21 @@ const expandableImages = document.querySelectorAll('.expandable');
   });
   </script>
    <!-- JavaScript para el desplazamiento suave -->
-
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var prevScrollpos = window.pageYOffset;
+      var navbar = document.getElementById("art-menu");
+    
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          navbar.classList.remove("hidden");
+        } else {
+          navbar.classList.add("hidden");
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    });
+    </script>
 </body>
 </html>
