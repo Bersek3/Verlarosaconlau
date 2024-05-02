@@ -152,11 +152,11 @@ ul, ol{
 }
 #art-menu a.navbar-brand {
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 13px;
     color: #fff;
     font-weight: 900;
     font-family: cursive;
-    margin-left: -178px;
+    margin-left: -36px;
 }
 span {
     font-family: cursive;
@@ -724,7 +724,12 @@ div#fandelau {
 }
 
 div#daniel {
-    margin-left: 301px;
+    margin-left: 508px;
+    margin-top: -84px;
+}
+
+div#cris {
+    margin-left: 208px;
     margin-top: -84px;
 }
 
@@ -736,5 +741,42 @@ div#daniel {
     }
     to {
       bottom: 0; /* Desliza hacia arriba */
+    }
+  }
+
+  @media (min-width: 600px) {
+    
+    #art-menu a.navbar-brand {
+        text-transform: uppercase;
+        font-size: 22px;
+        color: #fff;
+        font-weight: 900;
+        font-family: cursive;
+        margin-left: -58px;
+    }
+
+    div#fandelau {
+        margin-left: -106px;
+        margin-top: -84px;
+    }
+
+    div#cris {
+        margin-left: 496px;
+        margin-top: -84px;
+    }
+
+    div#daniel {
+        margin-left: 94px;
+        margin-top: -84px;
+    }
+
+    
+    div#fonder {
+        margin-left: 674px;
+        margin-top: -84px;
+    }
+    .col-sm-6-derechos {
+        margin-left: -291px;
+        margin-top: 41px;
     }
   }
