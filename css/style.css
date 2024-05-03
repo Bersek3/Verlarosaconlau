@@ -1,27 +1,27 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
 body, html {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        min-height: 100%;
-
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     color: #fff;
     overflow-x: hidden;
     background: #000000a8;
-
 }
 
+/* Contenedor principal */
 .container {
     width: 90%; /* Ancho máximo del contenedor */
     max-width: 1200px; /* Por ejemplo, ajusta según tus necesidades */
     margin: 0 auto; /* Centrar horizontalmente */
+    padding: 0 15px; /* Agregado de relleno a los lados */
 }
 
-/* Estilos personalizados para la barra de desplazamiento */
+/* Barra de desplazamiento personalizada */
 ::-webkit-scrollbar {
     width: 10px; /* Ancho de la barra de desplazamiento */
 }
@@ -30,6 +30,7 @@ body, html {
 ::-webkit-scrollbar-track {
     background: transparent; /* Color de fondo de la pista de la barra de desplazamiento */
 }
+
 
 
 ::-webkit-scrollbar-thumb {
@@ -41,32 +42,33 @@ body, html {
     background: transparent; /* Color del pulgar de la barra de desplazamiento al pasar el mouse */
 }
 
-h1{
+/* Títulos */
+h1, h2, h3, h4, h5 {
+    margin: 0;
     text-transform: none;
-    text-align: center;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
 }
-h1 strong{
+
+h1 strong {
     font-weight: 800;
 }
-h2{
-    text-transform: none;
-    line-height: 20px;
-    margin:  0;
-    color:#fff;
+
+h2 {
+    line-height: 1.5;
     font-family: cursive;
 }
-h3{
+
+h3 {
     font-size: 18px;
     font-weight: 900;
 }
-h4{
-    text-transform: none;
-}
-h5{
-    text-transform: none;
+
+h5 {
     font-weight: 700;
-    line-height: 20px;
+    line-height: 1.5;
 }
+
 
 
 .navbar-nav li a:hover {
@@ -702,7 +704,7 @@ span {
 }
 
 img.rosa-derecha {
-    margin-left: 1440px;
+    margin-left: 1475px;
     width: 300px;
     margin-top: -613px;
     opacity: 0.5;
@@ -711,7 +713,7 @@ div#portfolio {
     margin-left: -32px;
 }
 img.rosa-izquierda {
-    margin-left: -1385px;
+    margin-left: -1420px;
     width: 275px;
     margin-top: -689px;
     transform: rotateY(180deg);
@@ -733,7 +735,17 @@ div#cris {
     margin-top: -84px;
 }
 
-
+.navbar-scroll {
+    transition: top 0.5s ease;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar-scroll.hidden {
+    top: -100px; /* Altura del navbar */
+  }
   
   @keyframes slide-up {
     from {
@@ -779,4 +791,29 @@ div#cris {
         margin-left: -291px;
         margin-top: 41px;
     }
+    img.rosa-izquierda {
+        margin-left: -1420px;
+        width: 275px;
+        margin-top: -689px;
+        transform: rotateY(180deg);
+        opacity: 0.5;
+    }
+    img.rosa-derecha {
+        margin-left: 1475px;
+        width: 300px;
+        margin-top: -613px;
+        opacity: 0.5;
+    }
+    .navbar-scroll {
+        transition: top 0.5s ease;
+        top: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+      }
+      
+      .navbar-scroll.hidden {
+        top: -100px; /* Altura del navbar */
+      }
+      
   }
