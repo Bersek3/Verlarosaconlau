@@ -207,7 +207,7 @@ span {
 	}
 }
 #home {
-    background: url('/img/lau.jpg');
+    background: url(https://raw.githubusercontent.com/Bersek3/Verlarosaconlau/main/img/lau.jpg);
     background-size: cover;
     background-position: center;
     /* background-attachment: fixed; */
