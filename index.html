@@ -327,5 +327,23 @@
         }, 3000);
     });
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var prevScrollpos = window.pageYOffset;
+    var navbar = document.getElementById("art-menu");
+
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos || currentScrollPos === 0) {
+        navbar.classList.remove("hidden");
+      } else {
+        navbar.classList.add("hidden");
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  });
+</script>
+
 </body>
 </html>
