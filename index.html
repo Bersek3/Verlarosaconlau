@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>La rosa con Lau</title>
   <!-- Enlaces a CSS -->
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
@@ -23,7 +24,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="">La rosa de Guadalupe con Lau</a>
+          <a class="navbar-brand" id="index" href="">La rosa de Guadalupe con Lau</a>
       </div>
 
       <!-- Navigation Toggling -->
@@ -34,7 +35,6 @@
               <li><a href="#contact" class="scroll-nav">Créditos</a></li>
               <li><a href="">|</a></li> 
               <li><a href="fanart.html">Fan-Art</a></li> <!-- Cambiado el enlace para ir a fanart.html -->
-              <li><a href="recuerdos.html">Recuerdos</a></li> 
           </ul>
       </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -43,7 +43,7 @@
   <!-- Sección de Inicio -->
   <div id="home" class="text-center">
     <div class="layer">
-        <div class="content">
+        <div class="content" id="titulo">
             <h1><strong><span>¿Quieres ver la Rosa de Guadalupe?</span></strong></h1>
             <p class="lead">Sigan Viendo !!</p>
             <a href="#portfolio" class="fa fa-angle-down scroll-nav"></a>
@@ -327,23 +327,21 @@
         }, 3000);
     });
 </script>
-
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var prevScrollpos = window.pageYOffset;
-    var navbar = document.getElementById("art-menu");
+document.addEventListener("DOMContentLoaded", function() {
+  var prevScrollpos = window.pageYOffset;
+  var navbar = document.getElementById("art-menu");
 
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos || currentScrollPos === 0) {
-        navbar.classList.remove("hidden");
-      } else {
-        navbar.classList.add("hidden");
-      }
-      prevScrollpos = currentScrollPos;
-    };
-  });
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      navbar.classList.remove("hidden");
+    } else {
+      navbar.classList.add("hidden");
+    }
+    prevScrollpos = currentScrollPos;
+  };
+});
 </script>
-
 </body>
 </html>
