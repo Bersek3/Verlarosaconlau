@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>La rosa con Lau</title>
-  <!-- Enlaces a CSS -->
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css\loader..css">
-  <link rel="stylesheet" href="css\recuerdos.css">
-  
+  <link rel="stylesheet" href="css/recuerdos.css">
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      justify-content: center;
+    }
+  </style>
 </head>
 <body>
 
@@ -25,7 +30,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">La rosa de Guadalupe con Lau</a> <!-- Cambiado el enlace para ir a index.html -->
+            <!-- <a class="navbar-brand" href="index.html">La rosa de Guadalupe con Lau</a> Cambiado el enlace para ir a index.html -->
         </div>
 
         <!-- Navigation Toggling -->
@@ -39,131 +44,188 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-  <!-- Sección de Inicio -->
-  <div id="home" class="text-center">
-    <div class="layer">
-        <div class="content">
-            <h1><strong><span>Recurdos de Stream</span></strong></h1>
-            <p class="lead">Sigan Viendo !!</p>
-            <a href="#galeria" class="fa fa-angle-down scroll-nav"></a>
-
-        </div>
+<!-- Sección de Inicio -->
+<div id="home" class="text-center">
+  <div class="layer">
+    <div class="content">
+      <h1><strong><span>Recuerdos de Stream</span></strong></h1>
+      <p class="lead">¡Sigan Viendo!</p>
+      <a href="#galeria" class="fa fa-angle-down scroll-nav"></a>
     </div>
+  </div>
 </div>
 
-<div class="gallery">
-    <div class="item" id="mainImage">
-      <img src="img/stream(08-05)/1.webp" alt="Imagen 1">
-    </div>
-  </div>
+<!-- Galería de imágenes -->
+<div id="galeria" class="grid-container">
+    <!-- Primer carrusel -->
+    <div class="center">
+      <div class="carousel-wrapper">
+        <div class="carousel-text">Stream 07/05/2024</div>
+
+        <!-- abstract radio buttons for slides -->
+        <input id="slide1" type="radio" name="controls" checked="checked" />
+        <input id="slide2" type="radio" name="controls" />
+        <input id="slide3" type="radio" name="controls" />
+        <input id="slide4" type="radio" name="controls" />
+        <input id="slide5" type="radio" name="controls" />
   
-  <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <div class="modal-content">
-      <!-- Agrega el carrusel de Slick Carousel aquí -->
-      <div class="slider">
-        <div><img src="img/stream(08-05)/2.webp" alt="Imagen 2"></div>
-        <div><img src="img/stream(08-05)/3.webp" alt="Imagen 3"></div>
-        <div><img src="img/stream(08-05)/4.webp" alt="Imagen 4"></div>
-        <div><img src="img/stream(08-05)/5.webp" alt="Imagen 5"></div>
-        <!-- Agrega más imágenes según sea necesario -->
+        <!-- navigation dots -->
+        <label for="slide1" class="nav-dot"></label>
+        <label for="slide2" class="nav-dot"></label>
+        <label for="slide3" class="nav-dot"></label>
+        <label for="slide4" class="nav-dot"></label>
+        <label for="slide5" class="nav-dot"></label>
+  
+        <!-- arrows -->
+        <label for="slide1" class="left-arrow"> &lt; </label>
+        <label for="slide2" class="left-arrow"> &lt; </label>
+        <label for="slide3" class="left-arrow"> &lt; </label>
+        <label for="slide4" class="left-arrow"> &lt; </label>
+        <label for="slide5" class="left-arrow"> &lt; </label>
+  
+        <label for="slide1" class="right-arrow"> &gt; </label>
+        <label for="slide2" class="right-arrow"> &gt; </label>
+        <label for="slide3" class="right-arrow"> &gt; </label>
+        <label for="slide4" class="right-arrow"> &gt; </label>
+        <label for="slide5" class="right-arrow"> &gt; </label>
+  
+        <div class="carousel">
+            <ul>
+                <li>
+                  <img src="img\stream(08-05)\1.webp" />
+                </li>
+                <li>
+                  <img src="img\stream(08-05)\2.webp" alt="">
+                </li>
+                <li>
+                  <img src="img\stream(08-05)\3.webp" />
+                </li>
+                <li>
+                  <img src="img\stream(08-05)\4.webp">
+                </li>
+                <li>
+                  <img src="img\stream(08-05)\5.webp" alt="">
+                </li>
+              </ul>
+        </div>
       </div>
     </div>
+<!-- Segundo carrusel duplicado -->
+<div class="center">
+    <div class="carousel-wrapper">
+      <!-- abstract radio buttons for slides -->
+      <input id="slide6" type="radio" name="controls2" checked="checked" />
+      <input id="slide7" type="radio" name="controls2" />
+      <input id="slide8" type="radio" name="controls2" />
+      <input id="slide9" type="radio" name="controls2" />
+      <input id="slide10" type="radio" name="controls2" />
+  
+      <!-- navigation dots -->
+      <label for="slide6" class="nav-dot"></label>
+      <label for="slide7" class="nav-dot"></label>
+      <label for="slide8" class="nav-dot"></label>
+      <label for="slide9" class="nav-dot"></label>
+      <label for="slide10" class="nav-dot"></label>
+  
+      <!-- arrows -->
+      <label for="slide6" class="left-arrow"> &lt; </label>
+      <label for="slide7" class="left-arrow"> &lt; </label>
+      <label for="slide8" class="left-arrow"> &lt; </label>
+      <label for="slide9" class="left-arrow"> &lt; </label>
+      <label for="slide10" class="left-arrow"> &lt; </label>
+  
+      <label for="slide6" class="right-arrow"> &gt; </label>
+      <label for="slide7" class="right-arrow"> &gt; </label>
+      <label for="slide8" class="right-arrow"> &gt; </label>
+      <label for="slide9" class="right-arrow"> &gt; </label>
+      <label for="slide10" class="right-arrow"> &gt; </label>
+  
+        <div class="carousel">
+            <ul>
+                <li>
+                  <img src="https://raw.githubusercontent.com/osef-art/osef-art.github.io/master/src/assets/wallpapers/canyon.jpg" />
+                </li>
+                <li>
+                  <img src="https://m.media-amazon.com/images/I/31Y+R3Y3nvL._SL1000_.jpg" alt="">
+                </li>
+                <li>
+                  <img src="https://raw.githubusercontent.com/osef-art/ministick/main/data/img/main/ministick-clip-3.gif" />
+                </li>
+                <li>
+                  <img src="https://raw.githubusercontent.com/osef-art/osef-art.github.io/master/src/assets/wallpapers/smoke.jpg">
+                </li>
+                <li>
+                  <img src="https://images.ctfassets.net/9l3tjzgyn9gr/photo-157575/d224d518da6c26515a470a9b7e490df8/157575-honey-bun-baby.jpg?fm=jpg&fl=progressive&q=50&w=1200" alt="">
+                </li>
+              </ul>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+        <div class="carousel-wrapper">
+          <!-- abstract radio buttons for slides -->
+          <input id="slide11" type="radio" name="controls3" checked="checked" />
+          <input id="slide12" type="radio" name="controls3" />
+          <input id="slide13" type="radio" name="controls3" />
+          <input id="slide14" type="radio" name="controls3" />
+          <input id="slide15" type="radio" name="controls3" />
+      
+          <!-- navigation dots -->
+          <label for="slide11" class="nav-dot"></label>
+          <label for="slide12" class="nav-dot"></label>
+          <label for="slide13" class="nav-dot"></label>
+          <label for="slide14" class="nav-dot"></label>
+          <label for="slide15" class="nav-dot"></label>
+      
+          <!-- arrows -->
+          <label for="slide11"class="left-arrow"> &lt; </label>
+          <label for="slide12"class="left-arrow"> &lt; </label>
+          <label for="slide13"class="left-arrow"> &lt; </label>
+          <label for="slide14"class="left-arrow"> &lt; </label>
+          <label for="slide15" class="left-arrow"> &lt; </label>
+      
+          <label for="slide11"class="right-arrow"> &gt; </label>
+          <label for="slide12"class="right-arrow"> &gt; </label>
+          <label for="slide13"class="right-arrow"> &gt; </label>
+          <label for="slide14"class="right-arrow"> &gt; </label>
+          <label for="slide15" class="right-arrow"> &gt; </label>
+        
+              <div class="carousel">
+                  <ul>
+                      <li>
+                        <img src="https://raw.githubusercontent.com/osef-art/osef-art.github.io/master/src/assets/wallpapers/canyon.jpg" />
+                      </li>
+                      <li>
+                        <img src="https://m.media-amazon.com/images/I/31Y+R3Y3nvL._SL1000_.jpg" alt="">
+                      </li>
+                      <li>
+                        <img src="https://raw.githubusercontent.com/osef-art/ministick/main/data/img/main/ministick-clip-3.gif" />
+                      </li>
+                      <li>
+                        <img src="https://raw.githubusercontent.com/osef-art/osef-art.github.io/master/src/assets/wallpapers/smoke.jpg">
+                      </li>
+                      <li>
+                        <img src="https://images.ctfassets.net/9l3tjzgyn9gr/photo-157575/d224d518da6c26515a470a9b7e490df8/157575-honey-bun-baby.jpg?fm=jpg&fl=progressive&q=50&w=1200" alt="">
+                      </li>
+                    </ul>
+              </div>
+            </div>
+          </div>
   </div>
 
-  <!-- Footer -->
-  <footer id="footer">
-    <div class="footer-top">
-        <div class="container text-center">
-            <div class="footer-logo">
-                <a href="">Bersek</a>
-            </div>
-            <div class="social-icons">
-                <ul>
-                    <li><a class="twitter" href="https://twitter.com/_bersek"><i class="fa fa-twitter icon-sm"></i></a></li>
-                    <li><a class="linkedin" href="https://www.linkedin.com/in/francisco-mu%C3%B1oz-08801b202/"><i class="fa fa-linkedin icon-sm"></i></a></li>
-                    <li><a class="instagram" href="https://instagram.com/_Bersek"><i class="fa fa-instagram icon-sm"></i></a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="container text-center" id="fandelau">
-            <div class="footer-logo">
-                <a href="">Fan_de_laugamerCO</a>
-            </div>
-            <div class="social-icons">
-                <ul>
-                    <li><a class="instagram" href="https://www.instagram.com/otra_fan_de_laugamerco"><i class="fa fa-instagram icon-sm"></i></a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="container text-center" id="daniel">
-            <div class="footer-logo">
-                <a href="">Daniel Coronado</a>
-            </div>
-            <div class="social-icons">
-                <ul>
-                    <li><a class="instagram" href="https://www.instagram.com/d4n13lc0r0n4d0/"><i class="fa fa-instagram icon-sm"></i></a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="container text-center" id="cris">
-            <div class="footer-logo">
-                <a href="">Cris Xdnt</a>
-            </div>
-            <div class="social-icons">
-                <ul>
-                    <li><a class="instagram" href="https://www.instagram.com/cris.xdnt"><i class="fa fa-instagram icon-sm"></i></a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="container text-center" id="fonder">
-            <div class="footer-logo">
-                <a href="">Fonder</a>
-            </div>
-            <div class="social-icons">
-                <ul>
-                    <li><a class="instagram" href="https://www.instagram.com/fonder_25"><i class="fa fa-instagram icon-sm"></i></a></li>
-                </ul>
-            </div>
-        </div>
-
-
+<!-- Footer -->
+<footer id="footer">
+  <!-- Your existing footer content here -->
 </footer>
 
-<script src="js/modal.js"></script>
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- Slick Carousel CSS -->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-<!-- Slick Carousel theme CSS (opcional, elige uno) -->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-<!-- Slick Carousel JS -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script>  
-
-const expandableImages = document.querySelectorAll('.expandable');
-
-  // Iterar sobre cada imagen y agregar un eventListener para el clic
-  expandableImages.forEach(function(image) {
-    image.addEventListener('click', function() {
-      // Cambiar el tamaño de la imagen al hacer clic
-      this.classList.toggle('expanded');
-    });
-  });
-  </script>
-   <!-- JavaScript para el desplazamiento suave -->
-   <script>
+<script>
     document.addEventListener("DOMContentLoaded", function() {
       var prevScrollpos = window.pageYOffset;
       var navbar = document.getElementById("art-menu");
-    
+  
       window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
+        if (prevScrollpos > currentScrollPos || currentScrollPos === 0) {
           navbar.classList.remove("hidden");
         } else {
           navbar.classList.add("hidden");
@@ -171,29 +233,6 @@ const expandableImages = document.querySelectorAll('.expandable');
         prevScrollpos = currentScrollPos;
       };
     });
-    </script>
-    <script>
-        $(document).ready(function(){
-          // Inicializar Slick Carousel
-          $('.slider').slick({
-            arrows: true, // Mostrar flechas de navegación
-            prevArrow: '<button type="button" class="slick-prev">&#10094;</button>', // Personalizar flecha anterior
-            nextArrow: '<button type="button" class="slick-next">&#10095;</button>', // Personalizar flecha siguiente
-            infinite: true, // Repetir el carrusel de forma infinita
-            slidesToShow: 1, // Mostrar solo una imagen a la vez
-            slidesToScroll: 1 // Desplazar una imagen a la vez
-          });
-        
-          // Mostrar el modal al hacer clic en la imagen principal
-          $('#mainImage').click(function(){
-            $('#myModal').show();
-          });
-        
-          // Cerrar el modal al hacer clic en el botón de cerrar
-          $('.close').click(function(){
-            $('#myModal').hide();
-          });
-        });
-        </script>
+  </script>
 </body>
 </html>
