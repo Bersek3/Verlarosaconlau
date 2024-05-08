@@ -50,31 +50,27 @@
         </div>
     </div>
 </div>
+
 <div class="gallery">
     <div class="item" id="mainImage">
       <img src="img/stream(08-05)/1.webp" alt="Imagen 1">
     </div>
-</div>
-
-<div id="myModal" class="modal">
+  </div>
+  
+  <div id="myModal" class="modal">
     <span class="close">&times;</span>
     <div class="modal-content">
-      <div class="media-container"></div>
-      <a class="prev">&#10094;</a>
-      <a class="next">&#10095;</a>
+      <!-- Agrega el carrusel de Slick Carousel aquí -->
+      <div class="slider">
+        <div><img src="img/stream(08-05)/2.webp" alt="Imagen 2"></div>
+        <div><img src="img/stream(08-05)/3.webp" alt="Imagen 3"></div>
+        <div><img src="img/stream(08-05)/4.webp" alt="Imagen 4"></div>
+        <div><img src="img/stream(08-05)/5.webp" alt="Imagen 5"></div>
+        <!-- Agrega más imágenes según sea necesario -->
+      </div>
     </div>
-</div>
+  </div>
 
-<!-- Imágenes para el modal -->
-<div style="display: none;">
-    <img src="img/stream(08-05)/2.webp" alt="Imagen 2">
-    <img src="img/stream(08-05)/3.webp" alt="Imagen 3">
-    <img src="img/stream(08-05)/4.webp" alt="Imagen 4">
-    <img src="img/stream(08-05)/5.webp" alt="Imagen 5">
-    <img src="imagen6.jpg" alt="Imagen 6">
-    <img src="imagen7.jpg" alt="Imagen 7">
-    <img src="imagen8.jpg" alt="Imagen 8">
-</div>
   <!-- Footer -->
   <footer id="footer">
     <div class="footer-top">
@@ -139,7 +135,14 @@
 </footer>
 
 <script src="js/modal.js"></script>
-
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Slick Carousel CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<!-- Slick Carousel theme CSS (opcional, elige uno) -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+<!-- Slick Carousel JS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>  
 
 const expandableImages = document.querySelectorAll('.expandable');
@@ -169,5 +172,28 @@ const expandableImages = document.querySelectorAll('.expandable');
       };
     });
     </script>
+    <script>
+        $(document).ready(function(){
+          // Inicializar Slick Carousel
+          $('.slider').slick({
+            arrows: true, // Mostrar flechas de navegación
+            prevArrow: '<button type="button" class="slick-prev">&#10094;</button>', // Personalizar flecha anterior
+            nextArrow: '<button type="button" class="slick-next">&#10095;</button>', // Personalizar flecha siguiente
+            infinite: true, // Repetir el carrusel de forma infinita
+            slidesToShow: 1, // Mostrar solo una imagen a la vez
+            slidesToScroll: 1 // Desplazar una imagen a la vez
+          });
+        
+          // Mostrar el modal al hacer clic en la imagen principal
+          $('#mainImage').click(function(){
+            $('#myModal').show();
+          });
+        
+          // Cerrar el modal al hacer clic en el botón de cerrar
+          $('.close').click(function(){
+            $('#myModal').hide();
+          });
+        });
+        </script>
 </body>
 </html>
