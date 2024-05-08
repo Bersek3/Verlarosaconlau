@@ -20,9 +20,9 @@ function closeModal() {
 }
 
 function showMedia() {
-  var hiddenImages = document.querySelectorAll('div[style="display: none;"] img');
+  var modalImages = document.querySelectorAll('#myModal img');
   mediaContainer.innerHTML = "";
-  hiddenImages.forEach(function(image) {
+  modalImages.forEach(function(image) {
     var img = image.cloneNode(true);
     mediaContainer.appendChild(img);
   });
