@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>La rosa con Lau</title>
+  <!-- Enlaces a CSS -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css\loader..css">
+  <link rel="stylesheet" href="css\recuerdos.css">
+  
+</head>
+<body>
+
+<!-- Menú de navegación -->
+<nav id="art-menu" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collasped">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">La rosa de Guadalupe con Lau</a> <!-- Cambiado el enlace para ir a index.html -->
+        </div>
+
+        <!-- Navigation Toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collasped">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html#home" class="scroll-nav">Inicio</a></li> <!-- Cambiado el enlace para ir a index.html y a la sección "home" -->
+                <li><a href="index.html#portfolio" class="scroll-nav">Capitulos</a></li> <!-- Cambiado el enlace para ir a index.html y a la sección "portfolio" -->
+                <li><a href="index.html#contact" class="scroll-nav">Créditos</a></li> <!-- Cambiado el enlace para ir a index.html y a la sección "contact" -->
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+  <!-- Sección de Inicio -->
+  <div id="home" class="text-center">
+    <div class="layer">
+        <div class="content">
+            <h1><strong><span>Recurdos de Stream</span></strong></h1>
+            <p class="lead">Sigan Viendo !!</p>
+            <a href="#galeria" class="fa fa-angle-down scroll-nav"></a>
+
+        </div>
+    </div>
+</div>
+<div class="gallery">
+    <div class="item" id="mainImage">
+      <img src="img/stream(08-05)/1.webp" alt="Imagen 1">
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <div class="media-container"></div>
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+    </div>
+</div>
+
+<!-- Imágenes para el modal -->
+<div style="display: none;">
+    <img src="img/stream(08-05)/2.webp" alt="Imagen 2">
+    <img src="img/stream(08-05)/3.webp" alt="Imagen 3">
+    <img src="img/stream(08-05)/4.webp" alt="Imagen 4">
+    <img src="img/stream(08-05)/5.webp" alt="Imagen 5">
+    <img src="imagen6.jpg" alt="Imagen 6">
+    <img src="imagen7.jpg" alt="Imagen 7">
+    <img src="imagen8.jpg" alt="Imagen 8">
+</div>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-top">
+        <div class="container text-center">
+            <div class="footer-logo">
+                <a href="">Bersek</a>
+            </div>
+            <div class="social-icons">
+                <ul>
+                    <li><a class="twitter" href="https://twitter.com/_bersek"><i class="fa fa-twitter icon-sm"></i></a></li>
+                    <li><a class="linkedin" href="https://www.linkedin.com/in/francisco-mu%C3%B1oz-08801b202/"><i class="fa fa-linkedin icon-sm"></i></a></li>
+                    <li><a class="instagram" href="https://instagram.com/_Bersek"><i class="fa fa-instagram icon-sm"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container text-center" id="fandelau">
+            <div class="footer-logo">
+                <a href="">Fan_de_laugamerCO</a>
+            </div>
+            <div class="social-icons">
+                <ul>
+                    <li><a class="instagram" href="https://www.instagram.com/otra_fan_de_laugamerco"><i class="fa fa-instagram icon-sm"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container text-center" id="daniel">
+            <div class="footer-logo">
+                <a href="">Daniel Coronado</a>
+            </div>
+            <div class="social-icons">
+                <ul>
+                    <li><a class="instagram" href="https://www.instagram.com/d4n13lc0r0n4d0/"><i class="fa fa-instagram icon-sm"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container text-center" id="cris">
+            <div class="footer-logo">
+                <a href="">Cris Xdnt</a>
+            </div>
+            <div class="social-icons">
+                <ul>
+                    <li><a class="instagram" href="https://www.instagram.com/cris.xdnt"><i class="fa fa-instagram icon-sm"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container text-center" id="fonder">
+            <div class="footer-logo">
+                <a href="">Fonder</a>
+            </div>
+            <div class="social-icons">
+                <ul>
+                    <li><a class="instagram" href="https://www.instagram.com/fonder_25"><i class="fa fa-instagram icon-sm"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+
+</footer>
+
+<script src="js/modal.js"></script>
+
+<script>  
+
+const expandableImages = document.querySelectorAll('.expandable');
+
+  // Iterar sobre cada imagen y agregar un eventListener para el clic
+  expandableImages.forEach(function(image) {
+    image.addEventListener('click', function() {
+      // Cambiar el tamaño de la imagen al hacer clic
+      this.classList.toggle('expanded');
+    });
+  });
+  </script>
+   <!-- JavaScript para el desplazamiento suave -->
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var prevScrollpos = window.pageYOffset;
+      var navbar = document.getElementById("art-menu");
+    
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          navbar.classList.remove("hidden");
+        } else {
+          navbar.classList.add("hidden");
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    });
+    </script>
+</body>
+</html>
