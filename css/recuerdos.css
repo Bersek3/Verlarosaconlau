@@ -16,6 +16,11 @@ html h2, body h2 {
   opacity: 0.4;
 }
 
+img {
+  border: 0;
+  margin: -42px;
+}
+
 .line, .carousel li img, .carousel li, .carousel {
   width: 100%;
 }
