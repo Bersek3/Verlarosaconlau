@@ -36,6 +36,7 @@
               <li><a href="">|</a></li> 
               <li><a href="fanart.html">Fan-Art</a></li> <!-- Cambiado el enlace para ir a fanart.html -->
               <li><a href="recuerdos.html">Recuerdos</a></li> 
+
           </ul>
       </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -103,37 +104,37 @@
       <div class="credit-box-grid">
           <!-- Recuadro de crédito -->
           <div class="credit-box">
-              <img src="img/goma_naranja.png" alt="Nombre1">
+            <img src="img/goma_naranja.png" alt="Nombre1" data-sound="sound\papasitoooo.mp3">
               <p>OTRA_FAN D LAUGAMERCO</p>
           </div>
 
           <!-- Recuadro de crédito -->
           <div class="credit-box">
-              <img src="img/goma_azul.png" alt="Nombre2">
+              <img src="img/goma_azul.png" alt="Nombre2" data-sound="sound\SE_ME_PARO_LA_RIAATAAAMP3_320K_1.mp3">
               <p>CRIS XDN'T</p>
           </div>
 
           <!-- Recuadro de crédito -->
           <div class="credit-box">
-              <img src="img/goma_roja.png" alt="Nombre1">
+              <img src="img/goma_roja.png" alt="Nombre1" data-sound="sound\me_vengo_xd.mp3">
               <p>D4N13L C0R0N4D0</p>
           </div>
 
           <!-- Recuadro de crédito -->
           <div class="credit-box">
-              <img src="img/goma_verde.png" alt="Nombre2">
+              <img src="img/goma_verde.png" alt="Nombre2" data-sound="sound\grupopasen.mp3">
               <p>FONDER25</p>
           </div>
 
           <!-- Recuadro de crédito -->
           <div class="credit-box">
-              <img src="img/goma_morada.png" alt="Nombre2">
+              <img src="img/goma_morada.png" alt="Nombre2" data-sound="sound\fotitoxd.mp3">
               <p>BERSEK</p>
           </div>
 
           <!-- Recuadro de crédito -->
           <div class="credit-box">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/160px-Boca_Juniors_logo18.svg.png"  alt="Nombre2">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/160px-Boca_Juniors_logo18.svg.png"  alt="Nombre2" data-sound="sound\boquita.mp3">
               <p>LASH QAC</p>
           </div>
 
@@ -343,6 +344,36 @@ document.addEventListener("DOMContentLoaded", function() {
     prevScrollpos = currentScrollPos;
   };
 });
+</script>
+<script>
+  // Variable para almacenar el objeto de audio actualmente en reproducción
+  var currentSound = null;
+
+  // Función para reproducir el sonido al hacer clic en una imagen
+  function playSound(soundUrl) {
+    // Detener la reproducción del sonido actual, si existe
+    if (currentSound !== null) {
+      currentSound.pause();
+      currentSound.currentTime = 0;
+    }
+
+    // Crear un nuevo objeto de audio y reproducir el sonido
+    currentSound = new Audio(soundUrl);
+    currentSound.play();
+  }
+
+  // Obtener todas las imágenes dentro de los elementos con la clase "credit-box"
+  var creditBoxes = document.querySelectorAll('.credit-box img');
+
+  // Agregar un evento de clic a cada imagen
+  creditBoxes.forEach(function(img) {
+    img.addEventListener('click', function() {
+      // Obtener la ruta del sonido asociado a la imagen
+      var soundUrl = img.getAttribute('data-sound');
+      playSound(soundUrl);
+    });
+  });
+</script>
 </script>
 </body>
 </html>

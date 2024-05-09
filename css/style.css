@@ -70,7 +70,9 @@ h5 {
 }
 
 
-
+.credit-box img {
+    cursor: pointer;
+  }
 .navbar-nav li a:hover {
     color: pink; /* Cambia el color del texto a rosado */
   }
