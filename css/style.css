@@ -908,6 +908,13 @@ div#cris {
         font-size: 20px;
     }
 
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        margin-left: 35px;
+    }
 
     .credit-box-grid {
         display: ruby-text;
@@ -923,7 +930,7 @@ div#cris {
     }
     img#simbi {
         width: 167px;
-        margin-left: -426px;
+        margin-left: -1142px;
         margin-top: -1100px;
     }
     .pink-background {
