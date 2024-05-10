@@ -893,3 +893,86 @@ div#cris {
       }
       
   }
+
+  @media (max-width: 767px) {
+    /* Aquí van las reglas CSS para dispositivos con anchos de pantalla menores o iguales a 767px (por ejemplo, dispositivos móviles) */
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    #art-menu a.navbar-brand {
+        margin-left: 0;
+        font-size: 18px;
+    }
+
+    .navbar-nav li {
+        display: block;
+        text-align: center;
+    }
+
+    img.rosa-izquierda,
+    img.rosa-derecha {
+        width: 200px;
+        margin-top: -400px;
+    }
+
+    .footer-logo a {
+        font-size: 16px;
+    }
+
+    .social-icons ul li a {
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+    }
+    img#simbi {
+        width: 167px;
+        margin-left: -124px;
+        margin-top: -443px;
+    }
+}
+
+@media (max-width: 1000px) {
+    /* Aquí van las reglas CSS para dispositivos con anchos de pantalla menores o iguales a 767px (por ejemplo, dispositivos móviles) */
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    #art-menu a.navbar-brand {
+        margin-left: 0;
+        font-size: 18px;
+    }
+
+    .navbar-nav li {
+        display: block;
+        text-align: center;
+    }
+
+    img.rosa-izquierda,
+    img.rosa-derecha {
+        width: 200px;
+        margin-top: -400px;
+    }
+
+    .footer-logo a {
+        font-size: 16px;
+    }
+
+    .social-icons ul li a {
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+    }
+
+    img#simbi {
+        width: 167px;
+        margin-left: -137px;
+        margin-top: -276px;
+    }
+    
+}
+
