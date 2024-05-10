@@ -976,3 +976,25 @@ div#cris {
     
 }
 
+@media (max-width: 575px) { /* Cambia este valor según tus necesidades específicas */
+
+    /* Ajusta el diseño para mostrar las imágenes en columnas de dos en dispositivos móviles */
+
+    .portfolio-items.col-2 > li {
+        width: 50%; /* Configura el ancho de las imágenes para que ocupen el 50% del contenedor */
+    }
+
+    .portfolio-items.col-2 {
+        column-count: 2; /* Divide en dos columnas */
+    }
+
+    .portfolio-items.col-2 > li:nth-child(odd) {
+        margin-right: 0; /* Elimina el margen derecho de los elementos impares */
+    }
+    img#simbi {
+        width: 167px;
+        margin-left: -137px;
+        margin-top: -276px;
+    }
+}
+
