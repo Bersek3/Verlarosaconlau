@@ -9,16 +9,27 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+  
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/loader.css">
 </head>
 <body>
 
-<!-- Menú de navegación -->
-<nav id="art-menu" class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-      <!-- for better mobile display -->
+  <nav id="art-menu" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- Botón de la hamburguesa -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collasped">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      </div>
+  
       <div class="collapse navbar-collapse" id="navbar-collasped">
+        <!-- Lista de enlaces de navegación -->
         <ul class="nav navbar-nav">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="fanart.html">Fan-Art</a></li>
@@ -26,16 +37,15 @@
           <!-- Agrega más elementos de menú según sea necesario -->
         </ul>
       </div>
-
-  </div><!-- /.container-fluid -->
-</nav>
+    </div><!-- /.container-fluid -->
+  </nav>
 
   <!-- Sección de Inicio -->
   <div id="home" class="text-center">
     <div class="layer">
         <div class="content" id="titulo">
             <h1><strong><span>¿Quieres ver la Rosa de Guadalupe?</span></strong></h1>
-            <p class="lead">Sigan Viendo !!</p>
+
             <a href="#portfolio" class="fa fa-angle-down scroll-nav"></a>
 
         </div>
@@ -330,10 +340,11 @@ simbiImage.addEventListener('click', function() {
 </script>
 <script>
   $(document).ready(function(){
-  $('.navbar-toggle').on('click', function(){
-    $('#navbar-collasped').toggleClass('in');
+    $('.navbar-toggle').on('click', function(){
+      $('#navbar-collasped').toggleClass('in');
+      $('.navbar-collapse').toggleClass('pink-background'); // Modificado para cambiar el fondo del menú desplegable
+    });
   });
-});
 </script>
 </body>
 </html>

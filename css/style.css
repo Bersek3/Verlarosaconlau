@@ -93,6 +93,7 @@ body, html {
     max-width: 1200px; /* Por ejemplo, ajusta según tus necesidades */
     margin: 0 auto; /* Centrar horizontalmente */
     padding: 0 15px; /* Agregado de relleno a los lados */
+    margin-left: 74px;
 }
 
 /* Barra de desplazamiento personalizada */
@@ -150,6 +151,8 @@ h5 {
 .navbar-nav li a:hover {
     color: pink; /* Cambia el color del texto a rosado */
   }
+
+  
 
 
 /* Estilos para la sección de créditos */
@@ -278,9 +281,15 @@ span {
     background-color: #fff;
 }
 @media (max-width: 603px){
-#art-menu.navbar-default {
-	background-color: rgba(0, 0, 0, 0.79);
-	}
+    #art-menu.navbar-default {
+        /* background-color: rgba(0, 0, 0, 0.79); */
+    }
+
+    #home .layer {
+        height: 382px;
+        background-attachment: fixed;
+        background: rgba(7, 2, 4, 0.77);
+    }
 }
 #home {
     background: url(https://raw.githubusercontent.com/Bersek3/Verlarosaconlau/main/img/lau.jpg);
@@ -297,7 +306,7 @@ span {
 }
 
 #home .layer{
-    height: 750px;
+
     background-attachment: fixed;
 background: rgba(7, 2, 4, 0.77);
 }
@@ -891,6 +900,9 @@ div#cris {
       .navbar-scroll.hidden {
         top: -100px; /* Altura del navbar */
       }
+      .pink-background {
+        background-color: #400223;
+      }
       
   }
 
@@ -932,6 +944,9 @@ div#cris {
         margin-left: -124px;
         margin-top: -443px;
     }
+    .pink-background {
+        background-color: #400223;
+      }
 }
 
 @media (max-width: 1000px) {
@@ -939,6 +954,7 @@ div#cris {
     .container {
         max-width: 100%;
         padding: 0 15px;
+        margin-left: 29px;
     }
 
     #art-menu a.navbar-brand {
@@ -973,6 +989,9 @@ div#cris {
         margin-left: -137px;
         margin-top: -276px;
     }
+    .pink-background {
+        background-color: #400223;
+      }
     
 }
 
@@ -1003,8 +1022,49 @@ div#cris {
     }
     img#simbi {
         width: 167px;
-        margin-left: -585px;
+        margin-left: -556px;
         margin-top: -949px;
     }
+    .pink-background {
+        background-color: #400223;
+      }
+    
 }
 
+
+
+@media (max-width: 345px) { /* Cambia este valor según tus necesidades específicas */
+
+    /* Ajusta el diseño para mostrar las imágenes en columnas de dos en dispositivos móviles */
+
+    .portfolio-items.col-2 > li {
+        width: 50%; /* Configura el ancho de las imágenes para que ocupen el 50% del contenedor */
+    }
+
+    span {
+        margin-left: -3px;
+        font-size: 20px;
+    }
+
+
+    .credit-box-grid {
+        display: ruby-text;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+    }
+    .portfolio-items.col-2 {
+        column-count: 2; /* Divide en dos columnas */
+    }
+
+    .portfolio-items.col-2 > li:nth-child(odd) {
+        margin-right: 0; /* Elimina el margen derecho de los elementos impares */
+    }
+    img#simbi {
+        width: 167px;
+        margin-left: -426px;
+        margin-top: -1100px;
+    }
+    .pink-background {
+        background-color: #400223;
+      }
+}
