@@ -80,10 +80,11 @@ body, html {
   }
 
 
-
-
-
-
+  img#simbi {
+    width: 167px;
+    margin-left: -670px;
+    margin-top: -216px;
+}
 
 
 /* Contenedor principal */
@@ -656,7 +657,7 @@ span {
 }
 .footer-top {
     /* position: relative; */
-    background: #090708;
+    background: #090709;
     padding: 30px 0;
     margin-top: 160px;
 }
