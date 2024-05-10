@@ -984,6 +984,16 @@ div#cris {
         width: 50%; /* Configura el ancho de las imágenes para que ocupen el 50% del contenedor */
     }
 
+    span {
+        margin-left: -3px;
+    }
+
+
+    .credit-box-grid {
+        display: ruby-text;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+    }
     .portfolio-items.col-2 {
         column-count: 2; /* Divide en dos columnas */
     }
