@@ -82,10 +82,23 @@ body, html {
 
   img#simbi {
     width: 167px;
-    margin-left: -670px;
+    margin-left: -1419px;
     margin-top: -216px;
 }
 
+div#menu {
+    margin-left: 74px;
+    margin-top: -15px;
+}
+
+div#recuerdos {
+    margin-left: 56px;
+    margin-top: -1px;
+}
+div#fanart {
+    margin-left: 32px;
+    margin-top: 9px;
+}
 
 /* Contenedor principal */
 .container {
@@ -93,7 +106,7 @@ body, html {
     max-width: 1200px; /* Por ejemplo, ajusta según tus necesidades */
     margin: 0 auto; /* Centrar horizontalmente */
     padding: 0 15px; /* Agregado de relleno a los lados */
-    margin-left: 74px;
+    margin-left: 368px;
 }
 
 /* Barra de desplazamiento personalizada */
@@ -841,159 +854,8 @@ div#cris {
     }
   }
 
-  @media (min-width: 600px) {
-    
-    #art-menu a.navbar-brand {
-        text-transform: uppercase;
-        font-size: 22px;
-        color: #fff;
-        font-weight: 900;
-        font-family: cursive;
-        margin-left: -58px;
-    }
 
-    div#fandelau {
-        margin-left: -106px;
-        margin-top: -84px;
-    }
 
-    div#cris {
-        margin-left: 496px;
-        margin-top: -84px;
-    }
-
-    div#daniel {
-        margin-left: 94px;
-        margin-top: -84px;
-    }
-
-    
-    div#fonder {
-        margin-left: 674px;
-        margin-top: -84px;
-    }
-    .col-sm-6-derechos {
-        margin-left: -291px;
-        margin-top: 41px;
-    }
-    img.rosa-izquierda {
-        margin-left: -1420px;
-        width: 275px;
-        margin-top: -689px;
-        transform: rotateY(180deg);
-        opacity: 0.5;
-    }
-    img.rosa-derecha {
-        margin-left: 1475px;
-        width: 300px;
-        margin-top: -613px;
-        opacity: 0.5;
-    }
-    .navbar-scroll {
-        transition: top 0.5s ease;
-        top: 0;
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-      }
-      
-      .navbar-scroll.hidden {
-        top: -100px; /* Altura del navbar */
-      }
-      .pink-background {
-        background-color: #400223;
-      }
-      
-  }
-
-  @media (max-width: 767px) {
-    /* Aquí van las reglas CSS para dispositivos con anchos de pantalla menores o iguales a 767px (por ejemplo, dispositivos móviles) */
-    .container {
-        max-width: 100%;
-        padding: 0 15px;
-    }
-
-    #art-menu a.navbar-brand {
-        margin-left: 0;
-        font-size: 18px;
-    }
-
-    .navbar-nav li {
-        display: block;
-        text-align: center;
-    }
-
-    img.rosa-izquierda,
-    img.rosa-derecha {
-        width: 200px;
-        margin-top: -400px;
-    }
-
-    .footer-logo a {
-        font-size: 16px;
-    }
-
-    .social-icons ul li a {
-        font-size: 20px;
-        height: 50px;
-        width: 50px;
-        line-height: 50px;
-    }
-    img#simbi {
-        width: 167px;
-        margin-left: -124px;
-        margin-top: -443px;
-    }
-    .pink-background {
-        background-color: #400223;
-      }
-}
-
-@media (max-width: 1000px) {
-    /* Aquí van las reglas CSS para dispositivos con anchos de pantalla menores o iguales a 767px (por ejemplo, dispositivos móviles) */
-    .container {
-        max-width: 100%;
-        padding: 0 15px;
-        margin-left: 29px;
-    }
-
-    #art-menu a.navbar-brand {
-        margin-left: 0;
-        font-size: 18px;
-    }
-
-    .navbar-nav li {
-        display: block;
-        text-align: center;
-    }
-
-    img.rosa-izquierda,
-    img.rosa-derecha {
-        width: 200px;
-        margin-top: -400px;
-    }
-
-    .footer-logo a {
-        font-size: 16px;
-    }
-
-    .social-icons ul li a {
-        font-size: 20px;
-        height: 50px;
-        width: 50px;
-        line-height: 50px;
-    }
-
-    img#simbi {
-        width: 167px;
-        margin-left: -137px;
-        margin-top: -276px;
-    }
-    .pink-background {
-        background-color: #400223;
-      }
-    
-}
 
 @media (max-width: 496px) { /* Cambia este valor según tus necesidades específicas */
 
@@ -1026,7 +888,7 @@ div#cris {
         margin-top: -949px;
     }
     .pink-background {
-        background-color: #400223;
+        background-color: pink;
       }
     
 }
@@ -1065,6 +927,6 @@ div#cris {
         margin-top: -1100px;
     }
     .pink-background {
-        background-color: #400223;
+        background-color: pink;
       }
 }
