@@ -14,7 +14,10 @@ body, html {
 }
 
 
-
+div#fonder {
+    margin-left: 96px;
+    MARGIN-TOP: -87px;
+}
 
 #stars {
     width: 1px;
