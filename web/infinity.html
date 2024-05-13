@@ -75,6 +75,11 @@
                 </h3>
             </div>
 
+            <div id="search-bar" class="search-bar-wrapper">
+                <input class="search-bar" type="text" placeholder=Buscar..." v-model="searchQuery"
+                    @click="navigateTo('')"></input>
+            </div>
+
             <!-- <div v-if="!isMobile" class="import-button">
                 <div style="margin:0px; padding: 9px;" class="button" @click="showImportToast=true">
                 </div>
