@@ -65,6 +65,16 @@ body {
     box-shadow: 1458px 184px #FFF , 1040px 454px #FFF , 1172px 1260px #FFF , 5px 689px #FFF , 689px 1600px #FFF , 532px 654px #FFF , 78px 1888px #FFF , 595px 744px #FFF , 613px 1475px #FFF , 520px 405px #FFF , 361px 553px #FFF , 1334px 977px #FFF , 1141px 649px #FFF , 22px 852px #FFF , 1328px 967px #FFF , 618px 1232px #FFF , 1840px 127px #FFF , 1066px 828px #FFF , 94px 926px #FFF , 32px 1066px #FFF , 1437px 353px #FFF , 1085px 714px #FFF , 140px 1786px #FFF , 812px 1295px #FFF , 481px 1686px #FFF , 1586px 419px #FFF , 1559px 1886px #FFF , 991px 1925px #FFF , 259px 859px #FFF , 1765px 1730px #FFF , 1527px 605px #FFF , 1136px 1748px #FFF , 353px 598px #FFF , 640px 1206px #FFF , 1956px 1311px #FFF , 1120px 1346px #FFF , 427px 1041px #FFF , 1344px 1694px #FFF , 153px 417px #FFF , 1895px 1064px #FFF , 927px 1905px #FFF , 624px 1323px #FFF , 152px 11px #FFF , 888px 1991px #FFF , 988px 173px #FFF , 1344px 880px #FFF , 800px 1692px #FFF , 1578px 1649px #FFF , 1461px 1116px #FFF , 352px 489px #FFF , 931px 1599px #FFF , 41px 915px #FFF , 842px 1874px #FFF , 1960px 287px #FFF , 1188px 133px #FFF , 134px 753px #FFF , 1928px 1836px #FFF , 1489px 1985px #FFF , 394px 1362px #FFF , 894px 538px #FFF , 164px 966px #FFF , 1273px 1537px #FFF , 1211px 1995px #FFF , 104px 600px #FFF , 987px 444px #FFF , 625px 1356px #FFF , 3px 446px #FFF , 1016px 119px #FFF , 124px 1484px #FFF , 94px 1911px #FFF , 147px 1921px #FFF , 1370px 1384px #FFF , 804px 300px #FFF , 1675px 105px #FFF , 936px 824px #FFF , 1490px 929px #FFF , 1006px 1720px #FFF , 209px 24px #FFF , 822px 1263px #FFF , 1543px 344px #FFF , 1427px 1786px #FFF , 276px 1732px #FFF , 363px 1455px #FFF , 444px 472px #FFF , 186px 304px #FFF , 353px 299px #FFF , 1509px 165px #FFF , 1385px 428px #FFF , 274px 252px #FFF , 1233px 1328px #FFF , 1245px 1529px #FFF , 1305px 193px #FFF , 1276px 842px #FFF , 558px 1633px #FFF , 1643px 1212px #FFF , 1669px 1212px #FFF , 1898px 913px #FFF , 575px 1124px #FFF , 375px 1010px #FFF , 537px 1550px #FFF;
   }
 
+  @keyframes animStar {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-2000px);
+    }
+  }
+
+
 
 
 #container {
