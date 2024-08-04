@@ -196,12 +196,12 @@
 .carousel-text {
     position: absolute;
     top: 50%; /* Coloca el texto en el centro verticalmente */
-    left: 50%; /* Coloca el texto en el centro horizontalmente */
+    left: 49%; /* Coloca el texto en el centro horizontalmente */
     transform: translate(-50%, -50%); /* Lo mueve hacia arriba y hacia la izquierda en la mitad de su tamaño */
     color: white; /* Color del texto */
-    font-size: 24px; /* Tamaño del texto */
+    font-size: 20px; /* Tamaño del texto */
     z-index: 2; /* Asegura que el texto esté por encima del carrusel */
-    margin-top: -281px;
+    margin-top: -222px;
     color: #c92381;
 }
 
@@ -219,3 +219,175 @@
 
 
 
+/* Dimensiones para las imágenes de ambos carruseles */
+.carousel img, .carousel-2 img {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Ajusta según sea necesario */
+  object-fit: cover; /* Asegura que la imagen cubra el área del contenedor */
+}
+
+/* Estilo del contenedor del carrusel */
+.carousel-2 ul {
+  display: flex;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 500%; /* Ancho total del ul basado en el número de imágenes */
+  transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1); /* Transición suave para el cambio de imágenes */
+}
+
+.carousel-2 li {
+  flex: 0 0 20%; /* Cada elemento li ocupa el 20% del contenedor */
+  box-sizing: border-box; /* Incluye el padding y el border en el width y height del elemento */
+}
+
+.carousel-2 li img {
+  border-radius: 15px;
+  width: 100%; /* Asegura que la imagen se ajuste al tamaño del contenedor */
+  margin-left: -306px;
+
+}
+
+/* Radio Buttons for Second Carousel */
+#slide6:checked ~ .carousel-2 ul {
+  left: 0%;
+}
+
+#slide7:checked ~ .carousel-2 ul {
+  left: -100%;
+}
+
+#slide8:checked ~ .carousel-2 ul {
+  left: -200%;
+}
+
+#slide9:checked ~ .carousel-2 ul {
+  left: -300%;
+}
+
+#slide10:checked ~ .carousel-2 ul {
+  left: -400%;
+}
+
+/* Navigation Dots for Second Carousel */
+.nav-dot-2 {
+  position: absolute;
+  cursor: pointer;
+  margin-left: -7.5px;
+  bottom: -22.5px;
+  width: 15px;
+  height: 15px;
+  opacity: 0.5;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.nav-dot-2:hover {
+  opacity: 0.8;
+  transform: scale(1.2);
+}
+.nav-dot-2:active {
+  transform: scale(0.9);
+}
+
+.nav-dot-2[for=slide6] {
+  left: 40%;
+}
+
+#slide6:checked ~ .nav-dot-2[for=slide6] {
+  opacity: 1;
+}
+
+.nav-dot-2[for=slide7] {
+  left: 45%;
+}
+
+#slide7:checked ~ .nav-dot-2[for=slide7] {
+  opacity: 1;
+}
+
+.nav-dot-2[for=slide8] {
+  left: 50%;
+}
+
+#slide8:checked ~ .nav-dot-2[for=slide8] {
+  opacity: 1;
+}
+
+.nav-dot-2[for=slide9] {
+  left: 55%;
+}
+
+#slide9:checked ~ .nav-dot-2[for=slide9] {
+  opacity: 1;
+}
+
+.nav-dot-2[for=slide10] {
+  left: 60%;
+}
+
+#slide10:checked ~ .nav-dot-2[for=slide10] {
+  opacity: 1;
+}
+
+/* Arrows for Second Carousel */
+.right-arrow-2, .left-arrow-2 {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  font-weight: bolder;
+  text-shadow: 0 0 7.5px rgba(0, 0, 0, 0.7);
+  top: 50%;
+  z-index: 1;
+  opacity: 0.7;
+  margin-top: -25px;
+  height: 50px;
+  font-size: 50px;
+  transition: 0.2s;
+}
+.right-arrow-2:hover, .left-arrow-2:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.right-arrow-2:active, .left-arrow-2:active {
+  transform: scale(0.9);
+}
+
+.left-arrow-2 {
+  left: 15px;
+}
+
+.right-arrow-2 {
+  right: 15px;
+}
+
+#slide6:checked ~ .left-arrow-2[for=slide10], #slide6:checked ~ .right-arrow-2[for=slide7] {
+  display: block;
+}
+
+#slide7:checked ~ .left-arrow-2[for=slide6], #slide7:checked ~ .right-arrow-2[for=slide8] {
+  display: block;
+}
+
+#slide8:checked ~ .left-arrow-2[for=slide7], #slide8:checked ~ .right-arrow-2[for=slide9] {
+  display: block;
+}
+
+#slide9:checked ~ .left-arrow-2[for=slide8], #slide9:checked ~ .right-arrow-2[for=slide10] {
+  display: block;
+}
+
+#slide10:checked ~ .left-arrow-2[for=slide9], #slide10:checked ~ .right-arrow-2[for=slide6] {
+  display: block;
+}
+
+/* Carousel Styles */
+.carousel-2 {
+  overflow: hidden;
+  border-radius: 15px;
+  width: 624px;
+  margin-left: -11px;
+}
