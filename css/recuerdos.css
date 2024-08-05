@@ -391,3 +391,11 @@
   width: 624px;
   margin-left: -11px;
 }
+
+
+@media (max-width: 768px){
+  .carousel-wrapper {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}
