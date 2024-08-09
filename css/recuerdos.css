@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
 
+/* General Styles */
 .line, .carousel li img, .carousel li, .carousel {
   width: 100%;
 }
 
+/* Flexbox Styles */
 .flex, .carousel-wrapper, .center, .carousel ul {
   display: flex;
 }
@@ -14,6 +16,7 @@
   justify-content: center;
 }
 
+/* Carousel Wrapper */
 .carousel-wrapper {
   position: relative;
   max-width: 600px;
@@ -23,257 +26,66 @@
   display: none;
 }
 
-.carousel {
+/* Carousel Styles */
+.carousel, .carousel-2, .carousel-3 {
   overflow: hidden;
   border-radius: 15px;
-  width: 624px;
-  margin-left: -11px;
-}
-.carousel ul {
-  position: relative;
-  list-style: none;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 500%;
-  transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-}
-.carousel li img {
-  border-radius: 15px;
-}
-
-.nav-dot {
-  position: absolute;
-  cursor: pointer;
-  margin-left: -7.5px;
-  bottom: -22.5px;
-  width: 15px;
-  height: 15px;
-  opacity: 0.5;
-  background-color: white;
-  border-radius: 50%;
-  transition: 0.4s;
-}
-.nav-dot:hover {
-  opacity: 0.8;
-  transform: scale(1.2);
-}
-.nav-dot:active {
-  transform: scale(0.9);
-}
-
-.nav-dot[for=slide1] {
-  left: 40%;
-}
-
-#slide1:checked ~ .carousel ul {
-  left: 0%;
-}
-#slide1:checked ~ .nav-dot[for=slide1] {
-  opacity: 1;
-}
-
-.nav-dot[for=slide2] {
-  left: 45%;
-}
-
-#slide2:checked ~ .carousel ul {
-  left: -100%;
-}
-#slide2:checked ~ .nav-dot[for=slide2] {
-  opacity: 1;
-}
-
-.nav-dot[for=slide3] {
-  left: 50%;
-}
-
-#slide3:checked ~ .carousel ul {
-  left: -200%;
-}
-#slide3:checked ~ .nav-dot[for=slide3] {
-  opacity: 1;
-}
-
-.nav-dot[for=slide4] {
-  left: 55%;
-}
-
-#slide4:checked ~ .carousel ul {
-  left: -300%;
-}
-#slide4:checked ~ .nav-dot[for=slide4] {
-  opacity: 1;
-}
-
-.nav-dot[for=slide5] {
-  left: 60%;
-}
-
-#slide5:checked ~ .carousel ul {
-  left: -400%;
-}
-#slide5:checked ~ .nav-dot[for=slide5] {
-  opacity: 1;
-}
-
-.right-arrow, .left-arrow {
-  display: none;
-  position: absolute;
-  cursor: pointer;
-  font-weight: bolder;
-  text-shadow: 0 0 7.5px rgba(0, 0, 0, 0.7);
-  top: 50%;
-  z-index: 1;
-  opacity: 0.7;
-  margin-top: -25px;
-  height: 50px;
-  font-size: 50px;
-  transition: 0.2s;
-}
-.right-arrow:hover, .left-arrow:hover {
-  opacity: 1;
-  transform: scale(1.2);
-}
-.right-arrow:active, .left-arrow:active {
-  transform: scale(0.9);
-}
-
-.left-arrow {
-  left: 15px;
-}
-
-.right-arrow {
-  right: 15px;
-}
-
-#slide1:checked ~ .left-arrow[for=slide5], #slide1:checked ~ .right-arrow[for=slide2] {
-  display: block;
-}
-
-#slide2:checked ~ .left-arrow[for=slide1], #slide2:checked ~ .right-arrow[for=slide3] {
-  display: block;
-}
-
-#slide3:checked ~ .left-arrow[for=slide2], #slide3:checked ~ .right-arrow[for=slide4] {
-  display: block;
-}
-
-#slide4:checked ~ .left-arrow[for=slide3], #slide4:checked ~ .right-arrow[for=slide5] {
-  display: block;
-}
-
-#slide5:checked ~ .left-arrow[for=slide4], #slide5:checked ~ .right-arrow[for=slide1] {
-  display: block;
-}
-
-
-
-.signature {
-  margin-top: 100px;
-  bottom: 0;
-  font-family: "Quicksand";
-  color: #9696aa;
-  text-shadow: 0 2.5px rgba(0, 0, 0, 0.25);
-}
-.signature .name {
-  color: white;
-}
-.signature .dot {
-  margin: 0 5px;
-}
-.signature a {
-  color: white;
-  text-decoration: underline;
-}
-
-.carousel-wrapper {
-    position: relative; /* Hace que el contenedor sea relativo para que el texto se posicione de manera absoluta con respecto a él */
-    margin-left: 194px;
-}
-
-.carousel-text {
-    position: absolute;
-    top: 50%; /* Coloca el texto en el centro verticalmente */
-    left: 49%; /* Coloca el texto en el centro horizontalmente */
-    transform: translate(-50%, -50%); /* Lo mueve hacia arriba y hacia la izquierda en la mitad de su tamaño */
-    color: white; /* Color del texto */
-    font-size: 20px; /* Tamaño del texto */
-    z-index: 2; /* Asegura que el texto esté por encima del carrusel */
-    margin-top: -222px;
-    color: #c92381;
-}
-
-@media (max-width: 345px) {
-
-
-  .carousel {
-    overflow: hidden;
-    border-radius: 15px;
-    width: 624px;
-    margin-left: -11px;
-}
-  
-}
-
-
-
-/* Dimensiones para las imágenes de ambos carruseles */
-.carousel img, .carousel-2 img {
   width: 100%;
-  height: auto;
-  max-height: 400px; /* Ajusta según sea necesario */
-  object-fit: cover; /* Asegura que la imagen cubra el área del contenedor */
+  max-width: 624px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Estilo del contenedor del carrusel */
-.carousel-2 ul {
+.carousel ul, .carousel-2 ul, .carousel-3 ul {
   display: flex;
   position: relative;
   list-style: none;
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 500%; /* Ancho total del ul basado en el número de imágenes */
-  transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1); /* Transición suave para el cambio de imágenes */
+  width: 500%;
+  animation: slide 15s infinite;
 }
 
-.carousel-2 li {
-  flex: 0 0 20%; /* Cada elemento li ocupa el 20% del contenedor */
-  box-sizing: border-box; /* Incluye el padding y el border en el width y height del elemento */
+.carousel li, .carousel-2 li, .carousel-3 li {
+  flex: 0 0 20%;
+  box-sizing: border-box;
 }
 
-.carousel-2 li img {
+.carousel li img, .carousel-2 li img, .carousel-3 li img {
   border-radius: 15px;
-  width: 100%; /* Asegura que la imagen se ajuste al tamaño del contenedor */
-  margin-left: -306px;
-
+  width: 100%;
+  height: auto;
 }
 
-/* Radio Buttons for Second Carousel */
-#slide6:checked ~ .carousel-2 ul {
-  left: 0%;
+/* Contenedor del texto */
+.carousel-text {
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #c92381;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: cursive;
+  z-index: 10;
+}
+/* Animation */
+@keyframes slide {
+  0% { left: 0%; }
+  20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
 }
 
-#slide7:checked ~ .carousel-2 ul {
-  left: -100%;
-}
-
-#slide8:checked ~ .carousel-2 ul {
-  left: -200%;
-}
-
-#slide9:checked ~ .carousel-2 ul {
-  left: -300%;
-}
-
-#slide10:checked ~ .carousel-2 ul {
-  left: -400%;
-}
-
-/* Navigation Dots for Second Carousel */
-.nav-dot-2 {
+/* Navigation Dots */
+.nav-dot, .nav-dot-2, .nav-dot-3 {
   position: absolute;
   cursor: pointer;
   margin-left: -7.5px;
@@ -285,117 +97,73 @@
   border-radius: 50%;
   transition: 0.4s;
 }
-.nav-dot-2:hover {
+.nav-dot:hover, .nav-dot-2:hover, .nav-dot-3:hover {
   opacity: 0.8;
   transform: scale(1.2);
 }
-.nav-dot-2:active {
+.nav-dot:active, .nav-dot-2:active, .nav-dot-3:active {
   transform: scale(0.9);
 }
 
-.nav-dot-2[for=slide6] {
+/* Navigation Dots for First Carousel */
+.nav-dot[for=slide1] {
   left: 40%;
 }
 
-#slide6:checked ~ .nav-dot-2[for=slide6] {
-  opacity: 1;
+.nav-dot[for=slide2] {
+  left: 45%;
+}
+
+.nav-dot[for=slide3] {
+  left: 50%;
+}
+
+.nav-dot[for=slide4] {
+  left: 55%;
+}
+
+.nav-dot[for=slide5] {
+  left: 60%;
+}
+
+/* Navigation Dots for Second Carousel */
+.nav-dot-2[for=slide6] {
+  left: 40%;
 }
 
 .nav-dot-2[for=slide7] {
   left: 45%;
 }
 
-#slide7:checked ~ .nav-dot-2[for=slide7] {
-  opacity: 1;
-}
-
 .nav-dot-2[for=slide8] {
   left: 50%;
-}
-
-#slide8:checked ~ .nav-dot-2[for=slide8] {
-  opacity: 1;
 }
 
 .nav-dot-2[for=slide9] {
   left: 55%;
 }
 
-#slide9:checked ~ .nav-dot-2[for=slide9] {
-  opacity: 1;
-}
-
 .nav-dot-2[for=slide10] {
   left: 60%;
 }
 
-#slide10:checked ~ .nav-dot-2[for=slide10] {
-  opacity: 1;
+/* Navigation Dots for Third Carousel */
+.nav-dot-3[for=slide11] {
+  left: 40%;
 }
 
-/* Arrows for Second Carousel */
-.right-arrow-2, .left-arrow-2 {
-  display: none;
-  position: absolute;
-  cursor: pointer;
-  font-weight: bolder;
-  text-shadow: 0 0 7.5px rgba(0, 0, 0, 0.7);
-  top: 50%;
-  z-index: 1;
-  opacity: 0.7;
-  margin-top: -25px;
-  height: 50px;
-  font-size: 50px;
-  transition: 0.2s;
-}
-.right-arrow-2:hover, .left-arrow-2:hover {
-  opacity: 1;
-  transform: scale(1.2);
-}
-.right-arrow-2:active, .left-arrow-2:active {
-  transform: scale(0.9);
+.nav-dot-3[for=slide12] {
+  left: 45%;
 }
 
-.left-arrow-2 {
-  left: 15px;
+.nav-dot-3[for=slide13] {
+  left: 50%;
 }
 
-.right-arrow-2 {
-  right: 15px;
+.nav-dot-3[for=slide14] {
+  left: 55%;
 }
 
-#slide6:checked ~ .left-arrow-2[for=slide10], #slide6:checked ~ .right-arrow-2[for=slide7] {
-  display: block;
-}
-
-#slide7:checked ~ .left-arrow-2[for=slide6], #slide7:checked ~ .right-arrow-2[for=slide8] {
-  display: block;
-}
-
-#slide8:checked ~ .left-arrow-2[for=slide7], #slide8:checked ~ .right-arrow-2[for=slide9] {
-  display: block;
-}
-
-#slide9:checked ~ .left-arrow-2[for=slide8], #slide9:checked ~ .right-arrow-2[for=slide10] {
-  display: block;
-}
-
-#slide10:checked ~ .left-arrow-2[for=slide9], #slide10:checked ~ .right-arrow-2[for=slide6] {
-  display: block;
-}
-
-/* Carousel Styles */
-.carousel-2 {
-  overflow: hidden;
-  border-radius: 15px;
-  width: 624px;
-  margin-left: -11px;
-}
-
-
-@media (max-width: 768px){
-  .carousel-wrapper {
-    max-width: 100%;
-    margin: 20px auto;
-  }
+.nav-dot-3[for=slide15] {
+  left: 60%;
 }

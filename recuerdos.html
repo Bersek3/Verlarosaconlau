@@ -4,190 +4,217 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La rosa con Lau</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/recuerdos.css">
+
+  <!-- Inline Styles -->
   <style>
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      justify-content: center;
-    }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 columnas para los carruseles */
+    gap: 20px;
+    justify-content: center;
+    margin-left: 244px;
+}
   </style>
 </head>
 <body>
 
-  <div id='stars'></div>
-  <div id='stars2'></div>
-  <div id='stars3'></div>
+  <!-- Background Stars -->
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+  <!-- Navigation Bar -->
   <nav id="art-menu" class="navbar navbar-default navbar-fixed-top">
     <div class="container" id="recuerdos">
       <div class="navbar-header">
-        <!-- Botón de la hamburguesa -->
+        <!-- Hamburger Button -->
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collasped">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-
       </div>
-  
+
       <div class="collapse navbar-collapse" id="navbar-collasped">
-        <!-- Lista de enlaces de navegación -->
+        <!-- Navigation Links -->
         <ul class="nav navbar-nav">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="fanart.html">Fan-Art</a></li>
           <li><a href="">|</a></li>
           <li><a href="web/infinity.html">Recetas InfinityCraft</a></li>
-          <!-- Agrega más elementos de menú según sea necesario -->
+          <!-- Add more menu items as needed -->
         </ul>
       </div>
     </div><!-- /.container-fluid -->
   </nav>
 
-<!-- Sección de Inicio -->
-<div id="home" class="text-center">
-  <div class="layer">
-    <div class="content">
-      <h1><strong><span>Recuerdos de Stream</span></strong></h1>
-      <p class="lead">¡Sigan Viendo!</p>
-      <a href="#galeria" class="fa fa-angle-down scroll-nav"></a>
-    </div>
-  </div>
-</div>
-
-<!-- Galería de imágenes -->
-<div id="galeria" class="grid-container">
-  <!-- Primer carrusel -->
-  <div class="center">
-    <div class="carousel-wrapper">
-      <div class="carousel-text">Stream 08/05/2024</div>
-
-      <!-- abstract radio buttons for slides -->
-      <input id="slide1" type="radio" name="controls" checked="checked" />
-      <input id="slide2" type="radio" name="controls" />
-      <input id="slide3" type="radio" name="controls" />
-      <input id="slide4" type="radio" name="controls" />
-      <input id="slide5" type="radio" name="controls" />
-
-      <!-- navigation dots -->
-      <label for="slide1" class="nav-dot"></label>
-      <label for="slide2" class="nav-dot"></label>
-      <label for="slide3" class="nav-dot"></label>
-      <label for="slide4" class="nav-dot"></label>
-      <label for="slide5" class="nav-dot"></label>
-
-      <!-- arrows -->
-      <label for="slide1" class="left-arrow"> &lt; </label>
-      <label for="slide2" class="left-arrow"> &lt; </label>
-      <label for="slide3" class="left-arrow"> &lt; </label>
-      <label for="slide4" class="left-arrow"> &lt; </label>
-      <label for="slide5" class="left-arrow"> &lt; </label>
-
-      <label for="slide1" class="right-arrow"> &gt; </label>
-      <label for="slide2" class="right-arrow"> &gt; </label>
-      <label for="slide3" class="right-arrow"> &gt; </label>
-      <label for="slide4" class="right-arrow"> &gt; </label>
-      <label for="slide5" class="right-arrow"> &gt; </label>
-
-      <div class="carousel">
-          <ul>
-              <li>
-                <img src="img\stream(08-05)\1.webp" />
-              </li>
-              <li>
-                <img src="img\stream(08-05)\2.webp" alt="">
-              </li>
-              <li>
-                <img src="img\stream(08-05)\3.webp" />
-              </li>
-              <li>
-                <img src="img\stream(08-05)\4.webp">
-              </li>
-              <li>
-                <img src="img\stream(08-05)\5.webp" alt="">
-              </li>
-            </ul>
+  <!-- Home Section -->
+  <div id="home" class="text-center">
+    <div class="layer">
+      <div class="content">
+        <h1><strong><span>Recuerdos de Stream</span></strong></h1>
+        <p class="lead">¡Sigan Viendo!</p>
+        <a href="#galeria" class="fa fa-angle-down scroll-nav"></a>
       </div>
     </div>
   </div>
 
-<!-- Segundo carrusel -->
-<div class="center">
+  <!-- Grid Container for Carousels -->
+  <div class="grid-container">
+
+
+
+
+
+    <!-- First Carousel -->
+    <div class="carousel-wrapper">
+      <input type="radio" name="slider" id="slide1" checked>
+      <input type="radio" name="slider" id="slide2">
+      <input type="radio" name="slider" id="slide3">
+      <input type="radio" name="slider" id="slide4">
+      <input type="radio" name="slider" id="slide5">
+
+      <div class="carousel-text">Stream 08-05</div>
+      <div class="carousel">
+        <ul>
+          <li><img src="img/stream(08-05)/1.webp" alt="Imagen 1"></li>
+          <li><img src="img/stream(08-05)/2.webp" alt="Imagen 2"></li>
+          <li><img src="img/stream(08-05)/3.webp" alt="Imagen 3"></li>
+          <li><img src="img/stream(08-05)/4.webp" alt="Imagen 4"></li>
+          <li><img src="img/stream(08-05)/5.webp" alt="Imagen 5"></li>
+        </ul>
+      </div>
+
+      <div class="nav-dots">
+        <label for="slide1" class="nav-dot"></label>
+        <label for="slide2" class="nav-dot"></label>
+        <label for="slide3" class="nav-dot"></label>
+        <label for="slide4" class="nav-dot"></label>
+        <label for="slide5" class="nav-dot"></label>
+      </div>
+
+      <label for="slide5" class="left-arrow">‹</label>
+      <label for="slide2" class="right-arrow">›</label>
+    </div>
+
+
+
+
+    <!-- Second Carousel -->
+    <div class="carousel-wrapper">
+      <input type="radio" name="slider-2" id="slide6" checked>
+      <input type="radio" name="slider-2" id="slide7">
+      <input type="radio" name="slider-2" id="slide8">
+      <input type="radio" name="slider-2" id="slide9">
+
+      <div class="carousel-text">Stream 03-08 (El Regreso)</div>
+      <div class="carousel-2">
+        <ul>
+          <li><img src="img/stream(03-08)/1.jpg" alt="Imagen 6"></li>
+          <li><img src="img/stream(03-08)/3.jpg" alt="Imagen 8"></li>
+          <li><img src="img/stream(03-08)/4.jpg" alt="Imagen 9"></li>
+          <li><img src="img/stream(03-08)/5.jpg" alt="Imagen 10"></li>
+        </ul>
+      </div>
+
+      <div class="nav-dots">
+        <label for="slide6" class="nav-dot-2"></label>
+        <label for="slide7" class="nav-dot-2"></label>
+        <label for="slide8" class="nav-dot-2"></label>
+        <label for="slide9" class="nav-dot-2"></label>
+
+      </div>
+
+      <label for="slide10" class="left-arrow-2">‹</label>
+      <label for="slide7" class="right-arrow-2">›</label>
+  </div>
+
+
+
+
+
+
   <div class="carousel-wrapper">
-    <div class="carousel-text">Stream 04/08/2024 (El Regreso)</div>
+    <input type="radio" name="slider-3" id="slide11" checked>
+    <input type="radio" name="slider-3" id="slide12">
+    <input type="radio" name="slider-3" id="slide13">
 
-    <!-- abstract radio buttons for slides -->
-    <input id="slide6" type="radio" name="controls2" checked="checked" />
-    <input id="slide7" type="radio" name="controls2" />
-    <input id="slide8" type="radio" name="controls2" />
-    <input id="slide9" type="radio" name="controls2" />
-    <input id="slide10" type="radio" name="controls2" />
+  
 
-    <!-- navigation dots -->
-    <label for="slide6" class="nav-dot nav-dot-2"></label>
-    <label for="slide7" class="nav-dot nav-dot-2"></label>
-    <label for="slide8" class="nav-dot nav-dot-2"></label>
-    <label for="slide9" class="nav-dot nav-dot-2"></label>
-    <label for="slide10" class="nav-dot nav-dot-2"></label>
 
-    <!-- arrows -->
-    <label for="slide6" class="left-arrow left-arrow-2"> &lt; </label>
-    <label for="slide7" class="left-arrow left-arrow-2"> &lt; </label>
-    <label for="slide8" class="left-arrow left-arrow-2"> &lt; </label>
-    <label for="slide9" class="left-arrow left-arrow-2"> &lt; </label>
-    <label for="slide10" class="left-arrow left-arrow-2"> &lt; </label>
-
-    <label for="slide6" class="right-arrow right-arrow-2"> &gt; </label>
-    <label for="slide7" class="right-arrow right-arrow-2"> &gt; </label>
-    <label for="slide8" class="right-arrow right-arrow-2"> &gt; </label>
-    <label for="slide9" class="right-arrow right-arrow-2"> &gt; </label>
-    <label for="slide10" class="right-arrow right-arrow-2"> &gt; </label>
-
-    <div class="carousel carousel-2">
+   <div class="carousel-text">Stream 05-08</div>
+    <div class="carousel-3">
       <ul>
-        <li>
-          <img src="img/stream(03-08)/1.jpg"  alt=""/>
-        </li>
-        <li>
-          <img src="img/stream(03-08)/2.jpg" alt="" >
-        </li>
-        <li>
-          <img src="img/stream(03-08)/3.jpg" alt="" />
-        </li>
-        <li>
-          <img src="img/stream(03-08)/4.jpg" alt="">
-        </li>
-        <li>
-          <img src="img/stream(03-08)/5.jpg" alt="">
-        </li>
-        <li>
-          <img src="img/stream(03-08)/3.jpg" alt="">
-        </li>
-        <!-- Agrega más imágenes si es necesario -->
+        <li><img src="img/stream(05-08)/1.webp" alt="Imagen 11"></li>
+        <li><img src="img/stream(05-08)/2.webp" alt="Imagen 12"></li>
+        <li><img src="img/stream(05-08)/3.webp" alt="Imagen 13"></li>  
+
       </ul>
     </div>
+  
+    <div class="nav-dots">
+      <label for="slide11" class="nav-dot-3"></label>
+      <label for="slide12" class="nav-dot-3"></label>
+      <label for="slide13" class="nav-dot-3"></label>
+
+    </div>
   </div>
+
+
+
+
+<!-- Third Carousel -->
+<div class="carousel-wrapper">
+  <input type="radio" name="slider-3" id="slide11" checked>
+  <input type="radio" name="slider-3" id="slide12">
+  <input type="radio" name="slider-3" id="slide13">
+  <input type="radio" name="slider-3" id="slide14">
+  <input type="radio" name="slider-3" id="slide15">
+
+ <div class="carousel-text">Stream 07-08</div>
+  <div class="carousel-3">
+    <ul>
+      <li><img src="img/stream(07-08)/1.webp" alt="Imagen 11"></li>
+      <li><img src="img/stream(07-08)/2.webp" alt="Imagen 12"></li>
+      <li><img src="img/stream(07-08)/3.webp" alt="Imagen 13"></li>  
+      <li><img src="img/stream(07-08)/4.webp" alt="Imagen 14"></li>
+      <li><img src="img/stream(07-08)/5.webp" alt="Imagen 15"></li>
+    </ul>
+  </div>
+
+  <div class="nav-dots">
+    <label for="slide11" class="nav-dot-3"></label>
+    <label for="slide12" class="nav-dot-3"></label>
+    <label for="slide13" class="nav-dot-3"></label>
+    <label for="slide14" class="nav-dot-3"></label>
+    <label for="slide15" class="nav-dot-3"></label>
+  </div>
+
+  <label for="slide15" class="left-arrow-3">‹</label>
+  <label for="slide12" class="right-arrow-3">›</label>
 </div>
+    </div>
 
 
 
 
 
-
-
-
-
-
-<script>
+  <!-- JavaScript -->
+  <script>
     document.addEventListener("DOMContentLoaded", function() {
       var prevScrollpos = window.pageYOffset;
       var navbar = document.getElementById("art-menu");
-  
+
       window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos || currentScrollPos === 0) {
