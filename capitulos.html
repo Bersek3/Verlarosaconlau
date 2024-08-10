@@ -1,120 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulos</title>
+    <style>
+        /* Estilos básicos para el contenedor de capítulos */
+        #portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tres columnas como mínimo, pero ajustará según el tamaño de la pantalla */
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
+.portfolio-item {
+    box-sizing: border-box;
+}
 
-<li class="portfolio-item logo">
-    <div class="item-inner">
-        <img src="https://i.imgur.com/TSoKveI.png" alt="">
-        <h5>VIDEO PARA LAU</h5>
-        <div class="layer">
-            <a class="preview view" href="https://mega.nz/embed/DCwWnIZC#0k0Gbo9qe-oHZDsWC3N9uEt9MoxGaKsggNUzOmCpfvU"><i class="fa fa-eye"></i></a>
+.item-inner img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+        .item-inner h5 {
+            margin: 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        .layer {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        .layer a {
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .layer a:hover {
+            color: #f00;
+        }
+        /* Estilos para los botones de navegación */
+        .pagination-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .pagination-buttons button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .pagination-buttons button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <ul id="portfolio-list">
+        <!-- Aquí van todos los capítulos como en tu HTML original -->
+        <li class="portfolio-item web">
+            <div class="item-inner">
+                <img src="https://st1.uvnimg.com/dims4/default/9d6b7b7/2147483647/thumbnail/246x138/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F61%2Faf%2F686478b744949777ff26bc39e968%2F16e93856036741b98a297246df604183" alt="">
+                <h5>Un Cariñito al corazón</h5>
+                <div class="layer">
+                    <a class="preview view" href="https://mega.nz/embed/uPRTECqD#0_NT17p9AGHP15fb_bz2IT8-mTbW9pHt2PM6SlTcPg0"><i class="fa fa-eye"></i></a>
+                </div>
+            </div>
+        </li>
+
+        <li class="portfolio-item web">
+            <div class="item-inner">
+                <img src="https://st1.uvnimg.com/dims4/default/9e46c3e/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F0c%2Fb3%2Fb9580fe94f91924ddf7eb682c028%2Fa89c2a9a8bb64072945791d99be186d6" alt="">
+                <h5>Mi Enemiga</h5>
+                <div class="layer">
+                    <a class="preview view" href="https://mega.nz/embed/3OIkVRSS#1ipVQR-Koz0nq0-AllxzCTiKWL7WEGHP5v0HHAr9MGk"><i class="fa fa-eye"></i></a>
+                </div>
+            </div>
+        </li> 
+        
+        <li class="portfolio-item web">
+        <div class="item-inner">
+            <img src="https://st1.uvnimg.com/dims4/default/b41ebca/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F0b%2Fde%2Fada26b3340e29cf56d2e3f95b6a7%2F0f283019ff12402d8082728001e9a740" alt="">
+            <h5>Y si no te vuelvo a ver</h5>
+            <div class="layer">
+                <a class="preview view" href="https://mega.nz/embed/OCgEHQwS#Ibt_lByxfbGrAct_RE35rKBaCqT5-gQL6XUvzBmN9MA"><i class="fa fa-eye"></i></a>
+            </div>
         </div>
-    </div>
-</li>
-<li class="portfolio-item logo">
-    <div class="item-inner">
-        <img src="https://st1.uvnimg.com/dims4/default/b41ebca/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F0b%2Fde%2Fada26b3340e29cf56d2e3f95b6a7%2F0f283019ff12402d8082728001e9a740" alt="">
-        <h5>Y si no te vuelvo a ver</h5>
-        <div class="layer">
-            <a class="preview view" href="https://mega.nz/embed/OCgEHQwS#Ibt_lByxfbGrAct_RE35rKBaCqT5-gQL6XUvzBmN9MA"><i class="fa fa-eye"></i></a>
+    </li>
+
+    <li class="portfolio-item web">
+        <div class="item-inner">
+            <img src="https://st1.uvnimg.com/dims4/default/f97870e/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fe5%2Fa8%2F4fe57e5200324e6b793f9163e085%2Fsnapshot.jpg" alt="">
+            <h5>Palabras de amor</h5>
+            <div class="layer">
+                <a class="preview view" href="https://mega.nz/embed/2QUUSRAC#xUzON38dMyFpLd9X4FS8copJ1XswvIQBD50nXskCK14"><i class="fa fa-eye"></i></a>
+            </div>
         </div>
-    </div>
-</li>
+    </li>
 
-
-<li class="portfolio-item logo">
-    <div class="item-inner">
-        <img src="https://st1.uvnimg.com/dims4/default/f97870e/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fe5%2Fa8%2F4fe57e5200324e6b793f9163e085%2Fsnapshot.jpg" alt="">
-        <h5>Palabras de amor</h5>
-        <div class="layer">
-            <a class="preview view" href="https://mega.nz/embed/2QUUSRAC#xUzON38dMyFpLd9X4FS8copJ1XswvIQBD50nXskCK14"><i class="fa fa-eye"></i></a>
+    <li class="portfolio-item web">
+        <div class="item-inner">
+            <img src="https://imagenes.canalrcn.com/medium/ImgMultisiteRCNLite/la-rosa-de-guadalupe-capitulo-757-el-mejor-amigo-de-mateo.webp?VersionId=3UD_djn.73e4hgiOSQ_jzYf.gFaPm7By" alt="">
+            <h5>Lazos de sangre</h5>
+            <div class="layer">
+                <a class="preview view" href="https://mega.nz/embed/7MsjTRQC#W6yeJydL3ATL8pFyS5SgIxaEm6vEH3ApG7iDEDiTNik"><i class="fa fa-eye"></i></a>
+            </div>
         </div>
-    </div>
-</li>
-<li class="portfolio-item logo">
-    <div class="item-inner">
-        <img src="https://imagenes.canalrcn.com/medium/ImgMultisiteRCNLite/la-rosa-de-guadalupe-capitulo-757-el-mejor-amigo-de-mateo.webp?VersionId=3UD_djn.73e4hgiOSQ_jzYf.gFaPm7By" alt="">
-        <h5>Lazos de sangre</h5>
-        <div class="layer">
-            <a class="preview view" href="https://mega.nz/embed/7MsjTRQC#W6yeJydL3ATL8pFyS5SgIxaEm6vEH3ApG7iDEDiTNik"><i class="fa fa-eye"></i></a>
+    </li>
+
+    <li class="portfolio-item web">
+        <div class="item-inner">
+            <img src="https://st1.uvnimg.com/dims4/default/9516eaa/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F01%2F91%2F7a0761ee481ca8539f7fa49c6624%2F1f97f8d0a1314ad8ab87986aa1a7d77e" alt="">
+            <h5>La hija perfecta</h5>
+            <div class="layer">
+                <a class="preview view" href="https://mega.nz/embed/LAswWagT#RTmXqvtcblSWWgG5JlBwxXCPzwwEECTZvwzSE8vaHyo"><i class="fa fa-eye"></i></a>
+            </div>
         </div>
-    </div>
-</li>
-<li class="portfolio-item apps">
-    <div class="item-inner">
-        <img src="https://st1.uvnimg.com/dims4/default/9516eaa/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F01%2F91%2F7a0761ee481ca8539f7fa49c6624%2F1f97f8d0a1314ad8ab87986aa1a7d77e" alt="">
-        <h5>La hija perfecta</h5>
-        <div class="layer">
-            <a class="preview view" href="https://mega.nz/embed/LAswWagT#RTmXqvtcblSWWgG5JlBwxXCPzwwEECTZvwzSE8vaHyo"><i class="fa fa-eye"></i></a>
+    </li>
+
+    <li class="portfolio-item web">
+        <div class="item-inner">
+            <img src="https://st1.uvnimg.com/dims4/default/d23bf97/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F20%2F01%2F3698eb5f4f00a7dd48e817c8ba86%2Fb9c85f2a17a54c4f886327108f14b80e" alt="">
+            <h5>Mi papá</h5>
+            <div class="layer">
+                <a class="preview view" href="https://mega.nz/embed/bMsUCIIa#afc2IdKm5n3YCfKskU55SXs3P6-G6RnYw8j2spS8Zek"><i class="fa fa-eye"></i></a>
+            </div>
         </div>
-    </div>
-</li>
+    </li>
 
-
-<li class="portfolio-item apps">
-    <div class="item-inner">
-        <img src="https://st1.uvnimg.com/dims4/default/d23bf97/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F20%2F01%2F3698eb5f4f00a7dd48e817c8ba86%2Fb9c85f2a17a54c4f886327108f14b80e" alt="">
-        <h5>Mi papá</h5>
-        <div class="layer">
-            <a class="preview view" href="https://mega.nz/embed/bMsUCIIa#afc2IdKm5n3YCfKskU55SXs3P6-G6RnYw8j2spS8Zek"><i class="fa fa-eye"></i></a>
+    <li class="portfolio-item web">
+        <div class="item-inner">
+            <img src="https://st1.uvnimg.com/dims4/default/4e0abb7/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F34%2F1a%2Fd3eaff9245a38fb16ba551622075%2Fd78c44347d3e434797c6e77aa6750d82" alt="">
+            <h5>Estar Soltera</h5>
+            <div class="layer">
+                <a class="preview view" href="https://mega.nz/embed/qUNhDJIB#tup5um-hljNqFX6eumzAZB1jcLrUwtcHufOMTY3Lkmk"><i class="fa fa-eye"></i></a>
+            </div>
         </div>
-    </div>
-</li>
+    </li>
 
-
-<li class="portfolio-item logo web">
-    <div class="item-inner">
-        <img src="https://st1.uvnimg.com/dims4/default/4e0abb7/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F34%2F1a%2Fd3eaff9245a38fb16ba551622075%2Fd78c44347d3e434797c6e77aa6750d82" alt="">
-        <h5>Estar Soltera</h5>
-        <div class="layer">
-            <a class="preview view" href="https://mega.nz/embed/qUNhDJIB#tup5um-hljNqFX6eumzAZB1jcLrUwtcHufOMTY3Lkmk"><i class="fa fa-eye"></i></a>
+    <li class="portfolio-item web">
+        <div class="item-inner">
+            <img src="https://st1.uvnimg.com/dims4/default/4ae6172/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F71%2Fce%2Ff724269b436cbae706cee4b5829c%2F49189c0ebf5e4ed6ae1405d1033be8f8" alt="">
+            <h5>Como final de telenovela</h5>
+            <div class="layer">
+                <a class="preview view" href="https://mega.nz/embed/iAMCyIpA#VmGaz9WDMIlX39Q6NpMMuQxy-FScu9ylog58yC1nqa8"><i class="fa fa-eye"></i></a>
+            </div>
         </div>
-    </div>
-</li><!--/.portfolio-item-->
+    </li>
 
-
-<li class="portfolio-item logo web apps">
-    <div class="item-inner">
-        <img src="https://st1.uvnimg.com/dims4/default/18376b5/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F4a%2F26%2Fa2342111446baaf8bf505382485b%2F2f9b56b1d926431db1c07986b05654e8" alt="">
-        <h5>Bajas Pasiones</h5>
-        <div class="layer">
-            <a class="preview view" href="https://mega.nz/embed/mU8w0aSS#ISdp-cJlv1qf22YVzPDOTKYkJGM-fAFgIBVd-NfSwxo"><i class="fa fa-eye"></i></a>
+    <li class="portfolio-item web">
+        <div class="item-inner">
+            <img src="https://st1.uvnimg.com/dims4/default/18376b5/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F4a%2F26%2Fa2342111446baaf8bf505382485b%2F2f9b56b1d926431db1c07986b05654e8" alt="">
+            <h5>Bajas Pasiones</h5>
+            <div class="layer">
+                <a class="preview view" href="https://mega.nz/embed/mU8w0aDA#fdpukBoYmKtyhhwxS0ibv5EAdLmdxbDaB5Rmi2FuPI0"><i class="fa fa-eye"></i></a>
+            </div>
         </div>
-    </div>
-</li><!--/.portfolio-item-->
-
-
-<li class="portfolio-item apps web">
-    <div class="item-inner">
-        <img src="https://st1.uvnimg.com/dims4/default/c3af362/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fa1%2F60%2F4198a52c4a829c566c73439a0493%2F08fea81de0434f0c989deac557c93e84" alt="">
-        <h5>El Huerfano</h5>
-        <div class="layer">
-            <a class="preview view" href="https://mega.nz/embed/vZ0EnC4Z#ZPmbGPobsziuKgP3v0yWa1WNNwfiZ5D9Vm1f7css_sw"><i class="fa fa-eye"></i></a>
-        </div>
-    </div>
-</li><!--/.portfolio-item-->
-
-
-<li class="portfolio-item apps">
-    <div class="item-inner">
-        <img src="https://st1.uvnimg.com/dims4/default/4ae6172/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F71%2Fce%2Ff724269b436cbae706cee4b5829c%2F49189c0ebf5e4ed6ae1405d1033be8f8" alt="">
-        <h5>Como final de telenovela</h5>
-        <div class="layer">
-            <a class="preview view" href="https://mega.nz/embed/iAMCyIpA#VmGaz9WDMIlX39Q6NpMMuQxy-FScu9ylog58yC1nqa8"><i class="fa fa-eye"></i></a>
-        </div>
-    </div>
-</li><!--/.portfolio-item-->
-
+    </li>
 
 <li class="portfolio-item web">
-    <div class="item-inner">
-        <img src="https://st1.uvnimg.com/dims4/default/0835879/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F52%2F9d%2F0a4578d849498fd7788f92705ed7%2Fe5c6c74585814ff0b0dc81f8967466a4" alt="">
-        <h5>El Gigante</h5>
-        <div class="layer">
-            <a class="preview view" href="https://mega.nz/embed/7YcmCRIR#ip1izx3999e_k9ZcvKk-J-0NseVwFUK1msefuSXJSeg"><i class="fa fa-eye"></i></a>
-        </div>
-    </div>
-</li><!--/.portfolio-item-->
-
-<li class="portfolio-item logo">
     <div class="item-inner">
         <img src="https://st1.uvnimg.com/dims4/default/75f8418/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fec%2Fda%2Fc117116747d1a8f5a342400532f1%2Fc6b52d19755c4983800683846d4af87f" alt="">
         <h5>El monstruo de la casa</h5>
@@ -124,10 +180,21 @@
     </div>
 </li>
 
+<li class="portfolio-item web">
+    <div class="item-inner">
+        <img src="https://st1.uvnimg.com/dims4/default/0835879/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F52%2F9d%2F0a4578d849498fd7788f92705ed7%2Fe5c6c74585814ff0b0dc81f8967466a4" alt="">
+        <h5>El Gigante</h5>
+        <div class="layer">
+            <a class="preview view" href="https://mega.nz/embed/7YcmCRIR#ip1izx3999e_k9ZcvKk-J-0NseVwFUK1msefuSXJSeg"><i class="fa fa-eye"></i></a>
+        </div>
+    </div>
+</li>
+ 
 
 
-<!-- SEGUNDA PAGINA -->
-<li class="portfolio-item logo">
+
+
+<li class="portfolio-item web">
     <div class="item-inner">
         <img src="https://imagenes.canalrcn.com/medium/ImgMultisiteRCNLite/la-rosa-de-guadalupe-capitulo-759-la-perseverancia-del-colibri.webp?VersionId=kcAKhrxPcFyxcibiAPg8jMSVfXivzSJ7" alt="">
         <h5>La perseverancia del colibrí</h5>
@@ -137,7 +204,7 @@
     </div>
 </li>
 
-<li class="portfolio-item logo">
+<li class="portfolio-item web">
     <div class="item-inner">
         <img src="https://st1.uvnimg.com/dims4/default/ebff903/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F65%2F80%2Fa394c4a0ed14ad6d79c2652a07bd%2Fsnapshot.jpg" alt="">
         <h5>Doble sentencia</h5>
@@ -147,7 +214,7 @@
     </div>
 </li>
 
-<li class="portfolio-item logo">
+<li class="portfolio-item web">
     <div class="item-inner">
         <img src="https://imagenes.canalrcn.com/medium/ImgMultisiteRCNLite/la-rosa-de-guadalupe-capitulo-742-la-adiccion-de-ana.webp?VersionId=RBvnkLsNErJ44SVuaZnBH._oHggfdgTA" alt="">
         <h5>La adiccion de Ana</h5>
@@ -157,25 +224,8 @@
     </div>
 </li>
 
-<li class="portfolio-item logo">
-    <div class="item-inner">
-        <img src="https://st1.uvnimg.com/dims4/default/1fd6e34/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F0e%2Ffe%2F11b2361f4a19bb688e5eddbf89cc%2F8990cb22a99b41078926cac8d14c1c6b" alt="">
-        <h5>Un amor inconparable</h5>
-        <div class="layer">
-            <a class="preview view" href="https://mega.nz/embed/3UNkXLJK#J7Una9HMUwJcJhLosMhE5J42LQ_HccshPyRE7U1Tovw"><i class="fa fa-eye"></i></a>
-        </div>
-    </div>
-</li>
-<li class="portfolio-item logo">
-    <div class="item-inner">
-        <img src="https://st1.uvnimg.com/dims4/default/dd21154/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fc3%2F1c%2F6ec2cfa442f791d193538b138d01%2F280b83f04b0247e886206023e4a8c051" alt="">
-        <h5>El vendedor de sueños</h5>
-        <div class="layer">
-            <a class="preview view" href="https://mega.nz/embed/vH5V0QDZ#_qkLpUmCi7gyRqID1Lz3agGADxKTlumMLOgqsCH_b6k"><i class="fa fa-eye"></i></a>
-        </div>
-    </div>
-</li>
-<li class="portfolio-item logo">
+
+<li class="portfolio-item web">
     <div class="item-inner">
         <img src="https://st1.uvnimg.com/dims4/default/72491fd/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2F42%2F73%2F403ee0304475a54c4028336ed41a%2F4b95bba6dcb746d9a9b5544f40d1afd3" alt="">
         <h5>El profesor y la paloma</h5>
@@ -184,32 +234,25 @@
         </div>
     </div>
 </li>
-<!-- <li class="portfolio-item logo">
+
+<li class="portfolio-item web">
     <div class="item-inner">
-        <img src="https://imagenes.canalrcn.com/medium/ImgMultisiteRCNLite/la-rosa-de-guadalupe-capitulo-758-una-fuerte-amistad.webp?VersionId=qpfiFQcLhU2EhPy4krjQtMcVcdPMkE1a" alt="">
-        <h5>Una fuerte amistad</h5>
+        <img src="https://st1.uvnimg.com/dims4/default/dd21154/2147483647/thumbnail/400x225/quality/75/?url=http%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fc3%2F1c%2F6ec2cfa442f791d193538b138d01%2F280b83f04b0247e886206023e4a8c051" alt="">
+        <h5>El vendedor de sueños</h5>
         <div class="layer">
-            <a class="preview view" href="videos\masdespacio.mp4"><i class="fa fa-eye"></i></a>
+            <a class="preview view" href="https://mega.nz/embed/vH5V0QDZ#_qkLpUmCi7gyRqID1Lz3agGADxKTlumMLOgqsCH_b6k"><i class="fa fa-eye"></i></a>
         </div>
     </div>
 </li>
-<li class="portfolio-item logo">
-    <div class="item-inner">
-        <img src="https://imagenes.canalrcn.com/medium/ImgMultisiteRCNLite/la-rosa-de-guadalupe-capitulo-757-el-mejor-amigo-de-mateo.webp?VersionId=3UD_djn.73e4hgiOSQ_jzYf.gFaPm7By" alt="">
-        <h5>El mejor amigo de Mateo</h5>
-        <div class="layer">
-            <a class="preview view" href="videos\masdespacio.mp4"><i class="fa fa-eye"></i></a>
-        </div>
+
+    </ul>
+
+    <div class="pagination-buttons">
+        <button id="prev-button">Anterior</button>
+        <button id="next-button">Siguiente</button>
     </div>
-</li> -->
 
 
-<!-- TERCERA PAGINA -->
+</body>
+</html>
 
-
-<style>
-    .portfolio-item.logo {
-        pointer-events: none; /* Desactiva eventos de puntero, como clics */
-        cursor: default; /* Cambia el cursor a predeterminado para indicar que no se puede hacer clic */
-    }
-</style>
