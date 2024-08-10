@@ -26,8 +26,8 @@
   display: none;
 }
 
-/* Carousel Styles */
-.carousel, .carousel-2, .carousel-3 {
+/* Carousel Base Styles */
+.carousel, .carousel-2, .carousel-3, .carousel-4 {
   overflow: hidden;
   border-radius: 15px;
   width: 100%;
@@ -36,7 +36,8 @@
   margin-right: auto;
 }
 
-.carousel ul, .carousel-2 ul, .carousel-3 ul {
+/* Carousel List Base Styles */
+.carousel ul, .carousel-2 ul, .carousel-3 ul, .carousel-4 ul, .carousel-5 ul {
   display: flex;
   position: relative;
   list-style: none;
@@ -47,12 +48,13 @@
   animation: slide 15s infinite;
 }
 
-.carousel li, .carousel-2 li, .carousel-3 li {
+/* Carousel List Item Base Styles */
+.carousel li, .carousel-2 li, .carousel-3 li, .carousel-4 li, .carousel-5 li {
   flex: 0 0 20%;
   box-sizing: border-box;
 }
 
-.carousel li img, .carousel-2 li img, .carousel-3 li img {
+.carousel li img, .carousel-2 li img, .carousel-3 li img, .carousel-4 li img, .carousel-5 li img {
   border-radius: 15px;
   width: 100%;
   height: auto;
@@ -71,6 +73,15 @@
   font-family: cursive;
   z-index: 10;
 }
+
+.carousel-5 {
+  overflow: hidden;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 624px;
+  margin: 0 auto; /* Centrar el carrusel */
+}
+
 /* Animation */
 @keyframes slide {
   0% { left: 0%; }
@@ -97,10 +108,12 @@
   border-radius: 50%;
   transition: 0.4s;
 }
+
 .nav-dot:hover, .nav-dot-2:hover, .nav-dot-3:hover {
   opacity: 0.8;
   transform: scale(1.2);
 }
+
 .nav-dot:active, .nav-dot-2:active, .nav-dot-3:active {
   transform: scale(0.9);
 }
@@ -166,4 +179,47 @@
 
 .nav-dot-3[for=slide15] {
   left: 60%;
+}
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Mostrar un carrusel por línea en pantallas pequeñas */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .carousel-wrapper {
+    margin: 20px; /* Reducir el margen de los carruseles */
+  }
+
+  .carousel, .carousel-2, .carousel-3, .carousel-4, .carousel-5 {
+    max-width: 100%; /* Asegurar que los carruseles ocupen el 100% del contenedor */
+  }
+
+  .carousel-text {
+    font-size: 16px; /* Reducir el tamaño de fuente del texto en los carruseles */
+    padding: 5px;
+  }
+
+  .nav-dot, .nav-dot-2, .nav-dot-3 {
+    width: 10px; /* Reducir el tamaño de los puntos de navegación */
+    height: 10px;
+  }
+
+  .nav-dot:hover, .nav-dot-2:hover, .nav-dot-3:hover {
+    transform: scale(1.1); /* Reducir el tamaño de la animación de los puntos de navegación */
+  }
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Mostrar dos carruseles por línea en pantallas medianas */
+  }
+
+  .carousel-wrapper {
+    margin: 30px; /* Ajustar el margen de los carruseles en pantallas medianas */
+  }
 }
