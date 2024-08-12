@@ -195,12 +195,5 @@ a.fa.fa-angle-down {
   .nav-dots {
     display: none;
   }
-  #art-menu.navbar-default .navbar-nav > li > a {
-    text-transform: uppercase;
-    color: #FFF;
-    font-size: 12px;
-    letter-spacing: 1px;
-    font-family: cursive;
-    margin-left: 73px;
-}
+  
 }

@@ -66,7 +66,7 @@
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: #e7e7e7;
-    margin-left: -458px;
+    margin-left: -362px;
 }
 
 /* Estilos específicos para dispositivos móviles */
@@ -76,5 +76,9 @@
         border-color: rgb(231 231 231 / 0%);
         margin-top: -50px;
         margin-right: 157px;
+    }
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        border-color: #e7e7e7;
+        margin-right: -90px;
     }
 }
