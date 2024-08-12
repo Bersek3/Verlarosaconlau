@@ -680,6 +680,7 @@ span {
     color:#FFFFFF;
     font-weight:700;
     font-size: 16px;
+    margin-left: -18px;
 }
 #footer .social-icons ul li a {
     background-color: rgba(0,0,0,.2);
@@ -823,6 +824,10 @@ div#cris {
     width: 584px;
     margin-left: 75px;
   }
+
+  li#mamon {
+    margin-top: -208px;
+}
   
   @keyframes slide-up {
     from {
@@ -937,6 +942,10 @@ div#cris {
     /* Oculta los puntos de navegación en móviles */
     .nav-dots {
       display: none;
+    }
+    
+    li#mamon {
+        margin-top: -106px;
     }
     
   }
