@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La rosa con Lau</title>
   <!-- Enlaces a CSS -->
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
@@ -12,14 +12,25 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/loader.css">
   <link rel="stylesheet" href="css/navbar.css">
+
+  <style>
+    /* Estilos específicos para dispositivos móviles */
+    @media (max-width: 767px) {
+      #art-menu.navbar-default {
+        background-color: rgba(248, 248, 248, 0%);
+        border-color: rgba(231, 231, 231, 0%);
+        margin-top: -50px;
+        margin-right: 157px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div id='stars'></div>
   <div id='stars2'></div>
   <div id='stars3'></div>
 
- 
-<!-- Navigation Bar -->
+ <!-- Navigation Bar -->
 <nav id="art-menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container" id="recuerdos">
     <div class="navbar-header">
@@ -40,7 +51,6 @@
     <div class="collapse navbar-collapse" id="navbar-collasped">
       <!-- Navigation Links -->
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Inicio</a></li>
         <li><a href="fanart.html">Fan-Art</a></li>
         <li><a href="recuerdos.html">Recuerdos</a></li>
         <li><a href="#">|</a></li>
@@ -49,7 +59,6 @@
     </div>
   </div><!-- /.container-fluid -->
 </nav>
-
 
   <!-- Sección de Inicio -->
   <div id="home" class="text-center">
@@ -94,46 +103,38 @@
   <!-- Sección de Créditos -->
   <div id="contact" class="text-center">
     <div class="container">
-      <!-- Contenido de la sección de Créditos -->
       <div class="section-title center">
         <h2>CREDITOS</h2>
         <div class="line"></div>
       </div>
       <div class="gap"></div>
 
-      <!-- Recuadros de créditos en forma de cuadrícula -->
       <div class="credit-box-grid">
-        <!-- Recuadro de crédito -->
         <div class="credit-box">
           <img src="img/goma_naranja.png" alt="Nombre1" data-sound="sound/papasitoooo.mp3">
           <p>OTRA_FAN D LAUGAMERCO</p>
         </div>
 
-        <!-- Recuadro de crédito -->
         <div class="credit-box">
           <img src="img/goma_azul.png" alt="Nombre2" data-sound="sound/SE_ME_PARO_LA_RIAATAAAMP3_320K_1.mp3">
           <p>CRIS XDN'T</p>
         </div>
 
-        <!-- Recuadro de crédito -->
         <div class="credit-box">
           <img src="img/goma_roja.png" alt="Nombre1" data-sound="sound/me_vengo_xd.mp3">
           <p>D4N13L C0R0N4D0</p>
         </div>
 
-        <!-- Recuadro de crédito -->
         <div class="credit-box">
           <img src="img/goma_verde.png" alt="Nombre2" data-sound="sound/grupopasen.mp3">
           <p>FONDER25</p>
         </div>
 
-        <!-- Recuadro de crédito -->
         <div class="credit-box">
           <img src="img/goma_morada.png" alt="Nombre2" data-sound="sound/fotitoxd.mp3">
           <p>BERSEK</p>
         </div>
 
-        <!-- Recuadro de crédito -->
         <div class="credit-box">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/160px-Boca_Juniors_logo18.svg.png" alt="Nombre2" data-sound="sound/boquita.mp3">
           <p>LASH QAC</p>
@@ -142,7 +143,6 @@
         <div>
           <img src="img/simbi.png" id="simbi" alt="Nombre2" data-sound="sound/simbielpajero.mp3">
         </div>
-        <!-- Agrega más recuadros de crédito según sea necesario -->
       </div>
     </div>
   </div>
@@ -165,11 +165,11 @@
       <div class="footer-bottom">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6">
+            <div id="derechos" class="col-sm-6">
               <p>&copy; 2024 | Todos los derechos reservados</p>
             </div>
             <div class="col-sm-6">
-              <p class="pull-right">Desarrollado por <a href="">Bersek</a></p>
+              <p  id="developer" class="pull-right">Desarrollado por <a href="">Bersek</a></p>
             </div>
           </div>
         </div>
@@ -177,83 +177,87 @@
     </div>
   </footer>
 
-  <!-- JavaScript adicional para cargar dinámicamente el contenido de las secciones -->
+  <!-- Scripts de JavaScript -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       var portfolioList = document.querySelector(".portfolio-items");
       var capitulosURL = "capitulos.html";
-    
+
       // Página actual y cantidad de capítulos por página
       var paginaActual = 1;
       var capitulosPorPagina = 12;
-    
+
       // Función para cargar los capítulos de la página actual
       function cargarCapitulos() {
-        // Calcular el índice de inicio y fin de los capítulos para la página actual
         var inicio = (paginaActual - 1) * capitulosPorPagina;
         var fin = inicio + capitulosPorPagina;
-    
-        // Realizar la solicitud para obtener el contenido de capitulos.html
+
         fetch(capitulosURL)
           .then(response => response.text())
           .then(data => {
             var tempDiv = document.createElement("div");
             tempDiv.innerHTML = data;
-    
+
             var capitulos = tempDiv.querySelectorAll(".portfolio-item");
-    
-            // Limpiar la lista de capítulos antes de cargar nuevos capítulos
+
             portfolioList.innerHTML = "";
-    
-            // Iterar sobre los capítulos y agregarlos a la lista
+
             for (var i = inicio; i < fin && i < capitulos.length; i++) {
               portfolioList.appendChild(capitulos[i].cloneNode(true));
             }
-    
-            // Habilitar o deshabilitar los botones de paginación
-            document.querySelector(".pagination .prev").style.display = paginaActual > 1 ? "inline" : "none";
-            document.querySelector(".pagination .next").style.display = paginaActual * capitulosPorPagina < capitulos.length ? "inline" : "none";
+
+            document.querySelector(".prev").style.display = (paginaActual === 1) ? "none" : "inline-block";
+            document.querySelector(".next").style.display = (fin >= capitulos.length) ? "none" : "inline-block";
           });
       }
-    
-      // Cargar los capítulos iniciales al cargar la página
-      cargarCapitulos();
-    
-      // Manejar el evento de clic en los botones de paginación
-      document.querySelector(".pagination .prev").addEventListener("click", function(e) {
-        e.preventDefault();
-        if (paginaActual > 1) {
-          paginaActual--;
-          cargarCapitulos();
-        }
-      });
-    
-      document.querySelector(".pagination .next").addEventListener("click", function(e) {
-        e.preventDefault();
-        // Verificar si hay más capítulos para cargar
-        fetch(capitulosURL)
-          .then(response => response.text())
-          .then(data => {
-            var tempDiv = document.createElement("div");
-            tempDiv.innerHTML = data;
-    
-            var capitulos = tempDiv.querySelectorAll(".portfolio-item");
-            var totalCapitulos = capitulos.length;
-    
-            if (paginaActual * capitulosPorPagina < totalCapitulos) {
-              paginaActual++;
-              cargarCapitulos();
-            }
-          });
-      });
-    });
-    
-      </script>
 
-  <!-- Scripts de JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script src="js/main.js"></script>
+      // Eventos de los botones de navegación
+      document.querySelector(".prev").addEventListener("click", function(event) {
+        event.preventDefault();
+        paginaActual--;
+        cargarCapitulos();
+      });
+
+      document.querySelector(".next").addEventListener("click", function(event) {
+        event.preventDefault();
+        paginaActual++;
+        cargarCapitulos();
+      });
+
+      // Cargar la primera página de capítulos
+      cargarCapitulos();
+    });
+
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      if (target.tagName === 'IMG' && target.parentElement.classList.contains('credit-box')) {
+        var audio = new Audio(target.dataset.sound);
+        audio.play();
+      }
+    });
+
+    // Mostrar ocultar las imágenes en base a la ubicación de la página
+    function verificarUbicacion() {
+      const homeSection = document.getElementById("home");
+      const seccionHomeVisible = window.scrollY < homeSection.offsetHeight;
+      
+      const imagenDerecha = document.querySelector(".right-image");
+      const imagenIzquierda = document.querySelector(".left-image");
+      
+      if (seccionHomeVisible) {
+        imagenDerecha.style.display = "none";
+        imagenIzquierda.style.display = "none";
+      } else {
+        imagenDerecha.style.display = "block";
+        imagenIzquierda.style.display = "block";
+      }
+    }
+
+    // Verificar la ubicación al cargar la página y al hacer scroll
+    window.addEventListener("scroll", verificarUbicacion);
+    window.addEventListener("load", verificarUbicacion);
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 </body>
 </html>

@@ -19,7 +19,14 @@ div#fonder {
     MARGIN-TOP: -87px;
 }
 
-
+div#derechos {
+    margin-left: 444px;
+    margin-top: -37px;
+}
+p#developer {
+    margin-right: -95px;
+    margin-top: -7px;
+}
 
 #stars {
     width: 1px;
@@ -814,4 +821,86 @@ div#cris {
     to {
       bottom: 0; /* Desliza hacia arriba */
     }
+  }
+
+
+
+  
+/* Estilos específicos para móviles */
+@media (max-width: 768px) {
+
+
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: 23px;
+    }
+    div#derechos {
+        margin-left: 88px;
+        margin-top: -37px;
+    }
+    p#developer {
+        margin-right: 144px;
+        margin-top: -7px;
+    }
+
+    .footer-top {
+        /* position: relative; */
+        background: #090709;
+        padding: 30px 0;
+        margin-top: -175px;
+    }
+
+    span {
+      font-family: cursive;
+      margin-left: 7px;
+  }
+  
+  a.fa.fa-angle-down {
+    padding: 10px 15px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 24px;
+    margin-top: 143px;
+    transition: all 0.5s;
+    margin-left: 0pc;
+  }
+  
+  
+    /* Ajuste para que cada carrusel ocupe el 100% del ancho de la pantalla en móviles */
+    .grid-container {
+      display: block; /* Cambia el contenedor de grid a block para apilar los carruseles verticalmente */
+      background-color: black;
+    }
+  
+    .carousel-wrapper {
+      max-width: 100%; /* Asegura que el carrusel ocupe todo el ancho de la pantalla */
+      margin: 20px 0; /* Añade margen vertical entre carruseles */
+    }
+  
+    /* Ajusta el tamaño de las imágenes y los elementos del carrusel para pantallas móviles */
+    .carousel ul, .carousel-2 ul, .carousel-3 ul, .carousel-4 ul {
+      width: 100%; /* Mantiene el ancho de 500% para la animación */
+      height: auto; /* Ajusta la altura al contenido */
+      left: 0; /* Reinicia la posición de la lista en móviles */
+      display: flex; /* Mantiene el diseño en línea para el deslizamiento */
+    }
+  
+    .carousel li, .carousel-2 li, .carousel-3 li, .carousel-4 li {
+      flex: 0 0 100%; /* Cada diapositiva ocupa el 100% del ancho del carrusel */
+      height: auto; /* Ajusta la altura al contenido */
+    }
+  
+    .carousel li img, .carousel-2 li img, .carousel-3 li img, .carousel-4 li img {
+      width: 100%; /* Asegura que la imagen ocupe todo el ancho de su contenedor */
+      height: auto; /* Ajusta la altura de la imagen automáticamente */
+    }
+  
+    /* Oculta los puntos de navegación en móviles */
+    .nav-dots {
+      display: none;
+    }
+    
   }
