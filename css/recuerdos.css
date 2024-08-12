@@ -13,6 +13,7 @@
   gap: 20px;
   justify-content: center;
   margin-left: 1px;
+  background-color: black;
 }
 
 
@@ -164,6 +165,7 @@ a.fa.fa-angle-down {
   /* Ajuste para que cada carrusel ocupe el 100% del ancho de la pantalla en móviles */
   .grid-container {
     display: block; /* Cambia el contenedor de grid a block para apilar los carruseles verticalmente */
+    background-color: black;
   }
 
   .carousel-wrapper {
