@@ -278,6 +278,7 @@ span {
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
+    margin-left: -2px;
 }
 
 #home {
