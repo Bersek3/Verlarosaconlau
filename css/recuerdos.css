@@ -71,7 +71,6 @@
   position: absolute;
   top: 0;
   left: 5px;
-  background: rgba(0, 0, 0, 0.5);
   color: #c92381;
   padding: 10px;
   border-radius: 5px;
@@ -103,13 +102,9 @@
   gap: 10px; /* Space between dots */
 }
 
-.nav-dot, .nav-dot-2, .nav-dot-3, .nav-dot-4 {
-  cursor: pointer;
-  width: 15px;
-  height: 15px;
-  background-color: #808080; /* Gray color for inactive dots */
-  border-radius: 50%;
-  transition: background-color 0.4s, transform 0.4s;
+/* Remove Navigation Dots */
+.nav-dots, .nav-dot, .nav-dot-2, .nav-dot-3, .nav-dot-4 {
+  display: none; /* Hide dots */
 }
 
 .nav-dot:hover, .nav-dot-2:hover, .nav-dot-3:hover, .nav-dot-4:hover {
@@ -136,3 +131,39 @@ input[name="slider-4"]:checked ~ .carousel-wrapper .nav-dots .nav-dot-4 {
 .carousel-3 ul { animation: slide 20s infinite; }
 .carousel-4 ul { animation: slide 20s infinite; }
 
+
+/* Estilos específicos para móviles */
+@media (max-width: 768px) {
+  /* Ajuste para que cada carrusel ocupe el 100% del ancho de la pantalla en móviles */
+  .grid-container {
+    display: block; /* Cambia el contenedor de grid a block para apilar los carruseles verticalmente */
+  }
+
+  .carousel-wrapper {
+    max-width: 100%; /* Asegura que el carrusel ocupe todo el ancho de la pantalla */
+    margin: 20px 0; /* Añade margen vertical entre carruseles */
+  }
+
+  /* Ajusta el tamaño de las imágenes y los elementos del carrusel para pantallas móviles */
+  .carousel ul, .carousel-2 ul, .carousel-3 ul, .carousel-4 ul {
+    width: 100%; /* Mantiene el ancho de 500% para la animación */
+    height: auto; /* Ajusta la altura al contenido */
+    left: 0; /* Reinicia la posición de la lista en móviles */
+    display: flex; /* Mantiene el diseño en línea para el deslizamiento */
+  }
+
+  .carousel li, .carousel-2 li, .carousel-3 li, .carousel-4 li {
+    flex: 0 0 100%; /* Cada diapositiva ocupa el 100% del ancho del carrusel */
+    height: auto; /* Ajusta la altura al contenido */
+  }
+
+  .carousel li img, .carousel-2 li img, .carousel-3 li img, .carousel-4 li img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de su contenedor */
+    height: auto; /* Ajusta la altura de la imagen automáticamente */
+  }
+
+  /* Oculta los puntos de navegación en móviles */
+  .nav-dots {
+    display: none;
+  }
+}
