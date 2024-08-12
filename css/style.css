@@ -813,6 +813,16 @@ div#cris {
   .navbar-scroll.hidden {
     top: -100px; /* Altura del navbar */
   }
+
+
+  /* Estilo general */
+#fan {
+    background-image: url('https://i.imgur.com/sTEzKHr.png');
+    background-size: contain;
+    background-position: center;
+    width: 584px;
+    margin-left: 75px;
+  }
   
   @keyframes slide-up {
     from {
@@ -829,6 +839,12 @@ div#cris {
 /* Estilos específicos para móviles */
 @media (max-width: 768px) {
 
+
+    #fan {
+        margin-left: 0px; /* Ajusta el margen a la izquierda */
+        width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
+        background-size: cover; /* Asegúrate de que la imagen cubra toda la sección */
+      }
 
     .container {
         padding-right: 15px;
