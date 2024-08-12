@@ -13,7 +13,7 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/recuerdos.css">
-
+  <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
 
@@ -22,30 +22,36 @@
   <div id="stars2"></div>
   <div id="stars3"></div>
 
-  <!-- Navigation Bar -->
-  <nav id="art-menu" class="navbar navbar-default navbar-fixed-top">
-    <div class="container" id="recuerdos">
-      <div class="navbar-header">
-        <!-- Hamburger Button -->
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collasped">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
 
-      <div class="collapse navbar-collapse" id="navbar-collasped">
-        <!-- Navigation Links -->
-        <ul class="nav navbar-nav">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="fanart.html">Fan-Art</a></li>
-          <li><a href="#">|</a></li>
-          <li><a href="web/infinity.html">Recetas InfinityCraft</a></li>
-        </ul>
-      </div>
-    </div><!-- /.container-fluid -->
-  </nav>
+<!-- Navigation Bar -->
+<nav id="art-menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container" id="recuerdos">
+    <div class="navbar-header">
+      <!-- Hamburger Button -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collasped">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+
+    <!-- Blurred Background -->
+    <div class="backdrop"></div>
+
+    <!-- Collapsible Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbar-collasped">
+      <!-- Navigation Links -->
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="fanart.html">Fan-Art</a></li>
+        <li><a href="#">|</a></li>
+        <li><a href="web/infinity.html">Recetas InfinityCraft</a></li>
+      </ul>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
 
   <!-- Home Section -->
   <div id="home" class="text-center">
@@ -230,10 +236,18 @@
 
   <!-- JavaScript Libraries -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
   <!-- Custom Script -->
   <script src="js/carousel.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('.navbar-toggle').click(function() {
+      $('#navbar-collasped').collapse('toggle');
+    });
+  });
+</script>
 </body>
 </html>

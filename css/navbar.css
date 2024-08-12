@@ -1,0 +1,80 @@
+/* Ensure the navbar has a higher z-index and background color */
+#art-menu {
+    z-index: 1040; /* Ensure it’s below the title */
+    background-color: #333; /* Background color for the navbar */
+  }
+
+#art-menu.navbar-default {
+    background-color: rgb(248 248 248 / 0%);
+    border-color: rgb(231 231 231 / 0%);
+}
+
+#art-menu a.navbar-brand {
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 900;
+    font-family: cursive;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    flex-direction: row; /* Asegura que los elementos se alineen horizontalmente */
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto; /* Empuja los enlaces hacia la derecha del contenedor */
+}
+
+
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    display: none; /* Oculto por defecto */
+    z-index: 1000; /* Asegura que esté encima del contenido */
+    transition: opacity 0.3s ease; /* Transición suave para la visibilidad */
+}
+
+/* Container for the title */
+#navbar-title-container {
+    position: absolute; /* Position it absolutely relative to the nearest positioned ancestor */
+    top: 10px; /* Position it slightly below the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center it properly */
+    z-index: 1050; /* Ensure it's above the navbar */
+    width: 200px; /* Adjust the width to make it shorter */
+    text-align: center; /* Center the text */
+  }
+  
+  /* Title styling */
+  #navbar-title {
+    color: #fff;
+    font-size: 14px;
+    margin-left: -346px;
+    padding: 5px;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    border-radius: 5px;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e7e7e7;
+    margin-left: -458px;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    #art-menu.navbar-default {
+        background-color: rgb(248 248 248 / 0%);
+        border-color: rgb(231 231 231 / 0%);
+        margin-top: -50px;
+        margin-right: 157px;
+    }
+}

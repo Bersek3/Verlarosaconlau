@@ -1,4 +1,11 @@
 
+
+
+
+
+
+
+
 /* Style for grid container */
 .grid-container {
   display: grid;
@@ -7,6 +14,8 @@
   justify-content: center;
   margin-left: 1px;
 }
+
+
 
 /* General Styles */
 .line, .carousel li img, .carousel li, .carousel {
