@@ -1,5 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
+
+/* Style for grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  margin-left: 1px;
+}
 
 /* General Styles */
 .line, .carousel li img, .carousel li, .carousel {
@@ -20,7 +27,7 @@
 .carousel-wrapper {
   position: relative;
   max-width: 600px;
-  margin: 50px;
+  margin: 50px auto;
 }
 .carousel-wrapper input {
   display: none;
@@ -32,12 +39,11 @@
   border-radius: 15px;
   width: 100%;
   max-width: 624px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 /* Carousel List Base Styles */
-.carousel ul, .carousel-2 ul, .carousel-3 ul, .carousel-4 ul, .carousel-5 ul {
+.carousel ul, .carousel-2 ul, .carousel-3 ul, .carousel-4 ul {
   display: flex;
   position: relative;
   list-style: none;
@@ -45,16 +51,16 @@
   padding: 0;
   height: 100%;
   width: 500%;
-  animation: slide 15s infinite;
+  animation: slide 20s infinite; /* Adjusted timing for more images */
 }
 
 /* Carousel List Item Base Styles */
-.carousel li, .carousel-2 li, .carousel-3 li, .carousel-4 li, .carousel-5 li {
+.carousel li, .carousel-2 li, .carousel-3 li, .carousel-4 li {
   flex: 0 0 20%;
   box-sizing: border-box;
 }
 
-.carousel li img, .carousel-2 li img, .carousel-3 li img, .carousel-4 li img, .carousel-5 li img {
+.carousel li img, .carousel-2 li img, .carousel-3 li img, .carousel-4 li img {
   border-radius: 15px;
   width: 100%;
   height: auto;
@@ -63,7 +69,7 @@
 /* Contenedor del texto */
 .carousel-text {
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 5px;
   background: rgba(0, 0, 0, 0.5);
   color: #c92381;
@@ -72,14 +78,6 @@
   font-size: 18px;
   font-family: cursive;
   z-index: 10;
-}
-
-.carousel-5 {
-  overflow: hidden;
-  border-radius: 15px;
-  width: 100%;
-  max-width: 624px;
-  margin: 0 auto; /* Centrar el carrusel */
 }
 
 /* Animation */
@@ -92,93 +90,49 @@
   70% { left: -200%; }
   75% { left: -300%; }
   95% { left: -300%; }
-  100% { left: -400%; }
+  100% { left: 0%; }
 }
 
 /* Navigation Dots */
-.nav-dot, .nav-dot-2, .nav-dot-3 {
+.nav-dots {
   position: absolute;
-  cursor: pointer;
-  margin-left: -7.5px;
-  bottom: -22.5px;
-  width: 15px;
-  height: 15px;
-  opacity: 0.5;
-  background-color: white;
-  border-radius: 50%;
-  transition: 0.4s;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center dots horizontally */
+  gap: 10px; /* Space between dots */
 }
 
-.nav-dot:hover, .nav-dot-2:hover, .nav-dot-3:hover {
-  opacity: 0.8;
+.nav-dot, .nav-dot-2, .nav-dot-3, .nav-dot-4 {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  background-color: #808080; /* Gray color for inactive dots */
+  border-radius: 50%;
+  transition: background-color 0.4s, transform 0.4s;
+}
+
+.nav-dot:hover, .nav-dot-2:hover, .nav-dot-3:hover, .nav-dot-4:hover {
   transform: scale(1.2);
 }
 
-.nav-dot:active, .nav-dot-2:active, .nav-dot-3:active {
-  transform: scale(0.9);
+/* Custom Styles for Active Dots */
+input[name="slider"]:checked ~ .carousel-wrapper .nav-dots .nav-dot,
+input[name="slider-2"]:checked ~ .carousel-wrapper .nav-dots .nav-dot-2,
+input[name="slider-3"]:checked ~ .carousel-wrapper .nav-dots .nav-dot-3,
+input[name="slider-4"]:checked ~ .carousel-wrapper .nav-dots .nav-dot-4 {
+  background-color: #ffffff; /* White color for active dots */
 }
 
-/* Navigation Dots for First Carousel */
-.nav-dot[for=slide1] {
-  left: 40%;
+/* Positioning for navigation dots */
+.nav-dot, .nav-dot-2, .nav-dot-3, .nav-dot-4 {
+  position: relative;
+  bottom: 0; /* Ensure dots are aligned properly */
 }
 
-.nav-dot[for=slide2] {
-  left: 45%;
-}
-
-.nav-dot[for=slide3] {
-  left: 50%;
-}
-
-.nav-dot[for=slide4] {
-  left: 55%;
-}
-
-.nav-dot[for=slide5] {
-  left: 60%;
-}
-
-/* Navigation Dots for Second Carousel */
-.nav-dot-2[for=slide6] {
-  left: 40%;
-}
-
-.nav-dot-2[for=slide7] {
-  left: 45%;
-}
-
-.nav-dot-2[for=slide8] {
-  left: 50%;
-}
-
-.nav-dot-2[for=slide9] {
-  left: 55%;
-}
-
-.nav-dot-2[for=slide10] {
-  left: 60%;
-}
-
-/* Navigation Dots for Third Carousel */
-.nav-dot-3[for=slide11] {
-  left: 40%;
-}
-
-.nav-dot-3[for=slide12] {
-  left: 45%;
-}
-
-.nav-dot-3[for=slide13] {
-  left: 50%;
-}
-
-.nav-dot-3[for=slide14] {
-  left: 55%;
-}
-
-.nav-dot-3[for=slide15] {
-  left: 60%;
-}
-
+/* Custom styles for each carousel */
+.carousel ul { animation: slide 20s infinite; }
+.carousel-2 ul { animation: slide 20s infinite; }
+.carousel-3 ul { animation: slide 20s infinite; }
+.carousel-4 ul { animation: slide 20s infinite; }
 
