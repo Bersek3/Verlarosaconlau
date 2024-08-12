@@ -90,12 +90,6 @@ p#developer {
   }
 
 
-  img#simbi {
-    width: 167px;
-    margin-left: -1419px;
-    margin-top: -216px;
-}
-
 div#menu {
     margin-left: 74px;
     margin-top: -15px;
@@ -828,6 +822,15 @@ div#cris {
   li#mamon {
     margin-top: -208px;
 }
+
+#simbi {
+    display: flex;
+    /* justify-content: center; */
+    /* margin: 0 auto; */
+    margin-left: -320px;
+    margin-top: -49px;
+    width: 76%;
+  }
   
   @keyframes slide-up {
     from {
@@ -844,7 +847,11 @@ div#cris {
 /* Estilos específicos para móviles */
 @media (max-width: 768px) {
 
-
+    #simbi {
+        justify-content: flex-start;
+        margin-left: -33px;
+        margin-top: -157px;
+      }
     #fan {
         margin-left: 0px; /* Ajusta el margen a la izquierda */
         width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
