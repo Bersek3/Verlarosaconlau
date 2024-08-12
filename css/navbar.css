@@ -79,6 +79,13 @@
     }
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
         border-color: #e7e7e7;
-        margin-right: -90px;
+        margin-right: -159px;
+    }
+    #art-menu.navbar-default .navbar-nav > li > a {
+        text-transform: uppercase;
+        color: #FFF;
+        font-size: 12px;
+        letter-spacing: 0px;
+        font-family: cursive;
     }
 }
