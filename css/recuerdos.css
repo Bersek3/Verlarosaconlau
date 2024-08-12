@@ -79,7 +79,7 @@
 /* Contenedor del texto */
 .carousel-text {
   position: absolute;
-  top: 0;
+  top: -15px;
   left: 5px;
   color: #c92381;
   padding: 10px;
