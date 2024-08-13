@@ -28,6 +28,10 @@ p#developer {
     margin-top: -7px;
 }
 
+li#fix {
+    margin-top: -205px;
+}
+
 #stars {
     width: 1px;
     height: 1px;
@@ -847,9 +851,13 @@ div#cris {
 /* Estilos específicos para móviles */
 @media (max-width: 768px) {
 
+    li#fix {
+        margin-top: -102px;
+    }
+
     #simbi {
         justify-content: flex-start;
-        margin-left: -70px;
+        margin-left: -66px;
         margin-top: -157px;
       }
     #fan {
@@ -950,9 +958,6 @@ div#cris {
     .nav-dots {
       display: none;
     }
-    
-    li#mamon {
-        margin-top: -106px;
-    }
+
     
   }
