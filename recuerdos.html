@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La rosa con Lau</title>
+  <link rel="icon" href="img\rosa.png" type="image/x-icon">
 
   <!-- CSS Libraries -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/style.css">
@@ -16,7 +19,15 @@
   <link rel="stylesheet" href="css/navbar.css">
   
   <style>
-
+    /* Estilos específicos para dispositivos móviles */
+    @media (max-width: 767px) {
+      #art-menu.navbar-default {
+        background-color: rgba(248, 248, 248, 0%);
+        border-color: rgba(231, 231, 231, 0%);
+        margin-top: -50px;
+        margin-right: 157px;
+      }
+    }
 
     #sakura {
     position: fixed;
@@ -25,7 +36,10 @@
     pointer-events: none;
 }
 
-
+.btnbg {
+    position: relative;
+    z-index: 10; /* Un valor alto para que esté encima del fondo */
+}
   </style>
 </head>
 <body>
@@ -528,89 +542,12 @@
     });
   });
 </script>
- <!-- Scripts de JavaScript -->
- <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var portfolioList = document.querySelector(".portfolio-items");
-      var capitulosURL = "capitulos.html";
 
-      // Página actual y cantidad de capítulos por página
-      var paginaActual = 1;
-      var capitulosPorPagina = 12;
-
-      // Función para cargar los capítulos de la página actual
-      function cargarCapitulos() {
-        var inicio = (paginaActual - 1) * capitulosPorPagina;
-        var fin = inicio + capitulosPorPagina;
-
-        fetch(capitulosURL)
-          .then(response => response.text())
-          .then(data => {
-            var tempDiv = document.createElement("div");
-            tempDiv.innerHTML = data;
-
-            var capitulos = tempDiv.querySelectorAll(".portfolio-item");
-
-            portfolioList.innerHTML = "";
-
-            for (var i = inicio; i < fin && i < capitulos.length; i++) {
-              portfolioList.appendChild(capitulos[i].cloneNode(true));
-            }
-
-            document.querySelector(".prev").style.display = (paginaActual === 1) ? "none" : "inline-block";
-            document.querySelector(".next").style.display = (fin >= capitulos.length) ? "none" : "inline-block";
-          });
-      }
-
-      // Eventos de los botones de navegación
-      document.querySelector(".prev").addEventListener("click", function(event) {
-        event.preventDefault();
-        paginaActual--;
-        cargarCapitulos();
-      });
-
-      document.querySelector(".next").addEventListener("click", function(event) {
-        event.preventDefault();
-        paginaActual++;
-        cargarCapitulos();
-      });
-
-      // Cargar la primera página de capítulos
-      cargarCapitulos();
-    });
-
-    document.addEventListener('click', function(e) {
-      var target = e.target;
-      if (target.tagName === 'IMG' && target.parentElement.classList.contains('credit-box')) {
-        var audio = new Audio(target.dataset.sound);
-        audio.play();
-      }
-    });
-
-    // Mostrar ocultar las imágenes en base a la ubicación de la página
-    function verificarUbicacion() {
-      const homeSection = document.getElementById("home");
-      const seccionHomeVisible = window.scrollY < homeSection.offsetHeight;
-      
-      const imagenDerecha = document.querySelector(".right-image");
-      const imagenIzquierda = document.querySelector(".left-image");
-      
-      if (seccionHomeVisible) {
-        imagenDerecha.style.display = "none";
-        imagenIzquierda.style.display = "none";
-      } else {
-        imagenDerecha.style.display = "block";
-        imagenIzquierda.style.display = "block";
-      }
-    }
-
-    // Verificar la ubicación al cargar la página y al hacer scroll
-    window.addEventListener("scroll", verificarUbicacion);
-    window.addEventListener("load", verificarUbicacion);
   </script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-  <script id="sakura_point_vsh" type="x-shader/x_vertex">
+ <!-- sakura shader -->
+<script id="sakura_point_vsh" type="x-shader/x_vertex">
     uniform mat4 uProjection;
     uniform mat4 uModelview;
     uniform vec3 uResolution;
@@ -898,3 +835,5 @@
     <script  src="js\fondo.js"></script>
 </body>
 </html>
+
+
