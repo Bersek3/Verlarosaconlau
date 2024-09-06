@@ -13,7 +13,8 @@
   gap: 20px;
   justify-content: center;
   margin-left: 1px;
-  background-color: black;
+  margin-top: 193px;
+  background-color: transparent;
 }
 
 
@@ -73,22 +74,24 @@
 .carousel li img, .carousel-2 li img, .carousel-3 li img, .carousel-4 li img {
   border-radius: 15px;
   width: 100%;
-  height: auto;
+  height: 508px;
+  background: transparent;
+  object-fit: cover;
+  /* transform: translate(-73%, -60%); */
 }
 
 /* Contenedor del texto */
 .carousel-text {
   position: absolute;
-  top: -15px;
+  top: -47px;
   left: 5px;
-  color: #c92381;
+  color: white;
   padding: 10px;
   border-radius: 5px;
   font-size: 18px;
   font-family: cursive;
   z-index: 10;
 }
-
 /* Animation */
 @keyframes slide {
   0% { left: 0%; }
