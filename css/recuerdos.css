@@ -1,45 +1,38 @@
-
-
-
-
-
-
-
-
-/* Style for grid container */
+/* Ajusta la visibilidad y el diseño de los carruseles */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-content: center;
-  margin-left: 1px;
   margin-top: 193px;
   background-color: transparent;
 }
 
-
-
-/* General Styles */
-.line, .carousel li img, .carousel li, .carousel {
-  width: 100%;
-}
-
-/* Flexbox Styles */
-.flex, .carousel-wrapper, .center, .carousel ul {
-  display: flex;
-}
-
-.center, .carousel ul {
-  align-items: center;
-  justify-content: center;
-}
-
-/* Carousel Wrapper */
+/* Oculta los carruseles por defecto */
 .carousel-wrapper {
+  display: none; /* Oculta todos los carruseles por defecto */
   position: relative;
   max-width: 600px;
   margin: 50px auto;
 }
+
+/* Estilo del botón de cargar más */
+.load-more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #c92381;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.load-more-button:hover {
+  background-color: #c92381;
+}
+
+/* General Styles */
 .carousel-wrapper input {
   display: none;
 }
@@ -53,7 +46,6 @@
   margin: auto;
 }
 
-/* Carousel List Base Styles */
 .carousel ul, .carousel-2 ul, .carousel-3 ul, .carousel-4 ul {
   display: flex;
   position: relative;
@@ -62,10 +54,9 @@
   padding: 0;
   height: 100%;
   width: 500%;
-  animation: slide 20s infinite; /* Adjusted timing for more images */
+  animation: slide 20s infinite;
 }
 
-/* Carousel List Item Base Styles */
 .carousel li, .carousel-2 li, .carousel-3 li, .carousel-4 li {
   flex: 0 0 20%;
   box-sizing: border-box;
@@ -77,7 +68,6 @@
   height: 508px;
   background: transparent;
   object-fit: cover;
-  /* transform: translate(-73%, -60%); */
 }
 
 /* Contenedor del texto */
@@ -92,6 +82,7 @@
   font-family: cursive;
   z-index: 10;
 }
+
 /* Animation */
 @keyframes slide {
   0% { left: 0%; }
@@ -111,39 +102,36 @@
   bottom: 10px;
   width: 100%;
   display: flex;
-  justify-content: center; /* Center dots horizontally */
-  gap: 10px; /* Space between dots */
+  justify-content: center;
+  gap: 10px;
 }
 
-/* Remove Navigation Dots */
-.nav-dots, .nav-dot, .nav-dot-2, .nav-dot-3, .nav-dot-4 {
-  display: none; /* Hide dots */
+/* Navigation Dots Visibility */
+.carousel-wrapper .nav-dots {
+  display: flex; /* Ensure nav-dots are visible */
 }
 
-.nav-dot:hover, .nav-dot-2:hover, .nav-dot-3:hover, .nav-dot-4:hover {
+.nav-dot {
+  background-color: #ccc;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav-dot:hover {
   transform: scale(1.2);
 }
 
-/* Custom Styles for Active Dots */
-input[name="slider"]:checked ~ .carousel-wrapper .nav-dots .nav-dot,
-input[name="slider-2"]:checked ~ .carousel-wrapper .nav-dots .nav-dot-2,
-input[name="slider-3"]:checked ~ .carousel-wrapper .nav-dots .nav-dot-3,
-input[name="slider-4"]:checked ~ .carousel-wrapper .nav-dots .nav-dot-4 {
-  background-color: #ffffff; /* White color for active dots */
+input[name="slider-1"]:checked ~ .carousel-wrapper:nth-of-type(1) .nav-dots .nav-dot,
+input[name="slider-2"]:checked ~ .carousel-wrapper:nth-of-type(2) .nav-dots .nav-dot,
+input[name="slider-3"]:checked ~ .carousel-wrapper:nth-of-type(3) .nav-dots .nav-dot,
+input[name="slider-4"]:checked ~ .carousel-wrapper:nth-of-type(4) .nav-dots .nav-dot,
+input[name="slider-5"]:checked ~ .carousel-wrapper:nth-of-type(5) .nav-dots .nav-dot,
+input[name="slider-6"]:checked ~ .carousel-wrapper:nth-of-type(6) .nav-dots .nav-dot,
+input[name="slider-7"]:checked ~ .carousel-wrapper:nth-of-type(7) .nav-dots .nav-dot {
+  background-color: #ffffff;
 }
-
-/* Positioning for navigation dots */
-.nav-dot, .nav-dot-2, .nav-dot-3, .nav-dot-4 {
-  position: relative;
-  bottom: 0; /* Ensure dots are aligned properly */
-}
-
-/* Custom styles for each carousel */
-.carousel ul { animation: slide 20s infinite; }
-.carousel-2 ul { animation: slide 20s infinite; }
-.carousel-3 ul { animation: slide 20s infinite; }
-.carousel-4 ul { animation: slide 20s infinite; }
-
 
 /* Estilos específicos para móviles */
 @media (max-width: 768px) {
@@ -154,48 +142,45 @@ input[name="slider-4"]:checked ~ .carousel-wrapper .nav-dots .nav-dot-4 {
     background-color: rgba(0, 0, 0, 0.5);
     pointer-events: none;
     width: 1743px;
-    height: 1245PX;
-}
+    height: 1245px;
+  }
 
   span {
     font-family: cursive;
     margin-left: 7px;
-}
-
-
+  }
 
   /* Ajuste para que cada carrusel ocupe el 100% del ancho de la pantalla en móviles */
   .grid-container {
-    display: block; /* Cambia el contenedor de grid a block para apilar los carruseles verticalmente */
+    display: block;
     background-color: black;
   }
 
   .carousel-wrapper {
-    max-width: 100%; /* Asegura que el carrusel ocupe todo el ancho de la pantalla */
-    margin: 20px 0; /* Añade margen vertical entre carruseles */
+    max-width: 100%;
+    margin: 20px 0;
   }
 
   /* Ajusta el tamaño de las imágenes y los elementos del carrusel para pantallas móviles */
   .carousel ul, .carousel-2 ul, .carousel-3 ul, .carousel-4 ul {
-    width: 100%; /* Mantiene el ancho de 500% para la animación */
-    height: auto; /* Ajusta la altura al contenido */
-    left: 0; /* Reinicia la posición de la lista en móviles */
-    display: flex; /* Mantiene el diseño en línea para el deslizamiento */
+    width: 100%;
+    height: auto;
+    left: 0;
+    display: flex;
   }
 
   .carousel li, .carousel-2 li, .carousel-3 li, .carousel-4 li {
-    flex: 0 0 100%; /* Cada diapositiva ocupa el 100% del ancho del carrusel */
-    height: auto; /* Ajusta la altura al contenido */
+    flex: 0 0 100%;
+    height: auto;
   }
 
   .carousel li img, .carousel-2 li img, .carousel-3 li img, .carousel-4 li img {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho de su contenedor */
-    height: auto; /* Ajusta la altura de la imagen automáticamente */
+    width: 100%;
+    height: auto;
   }
 
   /* Oculta los puntos de navegación en móviles */
   .nav-dots {
     display: none;
   }
-  
 }
