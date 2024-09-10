@@ -9,8 +9,9 @@ body, html {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     color: #fff;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background: transparent;
+    overflow: auto;
 
 }
 
@@ -30,7 +31,11 @@ p#developer {
 }
 
 li#fix {
-    margin-top: -205px;
+    margin-top: 0px;
+}
+
+li.portfolio-item.web {
+    margin-top: 4px;
 }
 
 /* #stars {
@@ -121,12 +126,13 @@ div#fanart {
 
 
 ::-webkit-scrollbar-thumb {
-    background: #c92381; /* Color del pulgar de la barra de desplazamiento */
-    border-radius: 5px; /* Bordes redondeados del pulgar */
+    /* background: #c92381;
+    border-radius: 5px;  */
+    display: none;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: transparent; /* Color del pulgar de la barra de desplazamiento al pasar el mouse */
+    display: none; /* Color del pulgar de la barra de desplazamiento al pasar el mouse */
 }
 
 /* Títulos */
